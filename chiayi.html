@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- =====================================================
+         【組員必改 1/3】SEO Metadata
+         ・title：建議 30–60 字元，格式：核心關鍵字｜CCU Chiayi Guide
+         ・description：建議 80–160 字元，自然描述頁面內容
+         ・canonical：換成此頁實際 URL，例如：
+           https://ccu-chiayi-guide.site/food.html
+    ===================================================== -->
+    <title>嘉義景點與在地旅遊指南｜CCU Guide</title>
+    <meta
+      name="description"
+      content="整理嘉義熱門景點、在地美食與旅遊資訊，幫助中正大學學生與到訪嘉義的旅客快速規劃行程。"
+    />
+    <link rel="canonical" href="https://ccu-chiayi-guide.site/chiayi.html" />
+
+    <!-- Bootstrap 5 CSS（僅 CSS，不載入 Bootstrap JS） -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      crossorigin="anonymous"
+    />
+
+    <!-- 全站 CSS（載入順序不可更動） -->
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+
+    <!-- =====================================================
+         【組員必改 2/3】頁面專用 CSS
+         ・檔名依頁名命名，例如：food.css、traffic.css
+         ・僅放本頁獨有樣式，共用元件樣式請加入 components.css
+    ===================================================== -->
+    <link rel="stylesheet" href="/css/pages/chiayi.css" />
+
+    <!-- =====================================================
+         【組員必改 3/3】JSON-LD Structured Data
+         ・WebPage：更新 name、description、url
+         ・BreadcrumbList：依實際層數調整 itemListElement
+           - 二層（首頁 / 本頁）：保留兩筆 ListItem
+           - 三層（首頁 / 分類 / 本頁）：新增第二筆並填入分類頁 URL
+         ・Schema 內容必須與頁面可見文字一致，不得捏造
+    ===================================================== -->
+    <script type="application/ld+json">
+      [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "嘉義景點與在地旅遊指南｜CCU Guide",
+          "description": "整理嘉義熱門景點、在地美食與旅遊資訊，幫助中正大學學生與到訪嘉義的旅客快速規劃行程。",
+          "url": "https://ccu-chiayi-guide.site/chiayi.html",
+          "inLanguage": "zh-TW",
+          "isPartOf": {
+            "@type": "WebSite",
+            "url": "https://ccu-chiayi-guide.site"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "首頁",
+              "item": "https://ccu-chiayi-guide.site/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "嘉義指南",
+              "item": "https://ccu-chiayi-guide.site/chiayi.html"
+            }
+          ]
+        }
+      ]
+    </script>
+  </head>
+
+  <body>
+    <div class="site-wrapper">
+      <!-- 固定導覽列（Sticky Header）-->
+      <div class="sticky-header-wrap sticky-top">
+        <header class="site-header" role="banner">
+          <div class="header-inner">
+            <a href="/" class="site-logo" aria-label="CCU Chiayi Guide 首頁">
+              <img
+                src="/images/ccu-school-emblem.png"
+                alt="國立中正大學校徽"
+                class="logo-emblem"
+                width="36"
+                height="36"
+              />
+              <span class="logo-text">
+                CCU Chiayi Guide
+                <span class="logo-sub">中正大學新生與嘉義生活指南</span>
+              </span>
+            </a>
+
+            <button
+              class="nav-toggle"
+              aria-label="開啟導覽選單"
+              aria-expanded="false"
+              aria-controls="site-nav"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </header>
+
+        <!-- 主要導覽
+             【組員提醒】將本頁對應的 <a> 加上 aria-current="page"
+             例如：<a href="/chiayi.html" aria-current="page">嘉義</a>
+        -->
+        <nav class="site-nav" id="site-nav" aria-label="主要導覽">
+          <ul>
+            <li><a href="/">首頁</a></li>
+            <li><a href="/food.html">美食</a></li>
+            <li><a href="/traffic.html">交通</a></li>
+            <li><a href="/chiayi.html" aria-current="page">嘉義</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- /.sticky-header-wrap（固定區塊結束） -->
+
+      <!-- =====================================================
+           麵包屑導覽（非固定，隨頁面自然滾動離開螢幕）
+           ・此區塊刻意置於 sticky wrapper 之外，不加任何 sticky 樣式
+           ・修改說明：
+             - 二層（首頁 / 本頁）：保留下方兩個 <li> 即可
+             - 三層（首頁 / 分類 / 本頁）：在兩者之間插入：
+               <li class="breadcrumb-item"><a href="/category.html">分類名稱</a></li>
+             - 將 "目前頁面名稱" 換成實際頁面名稱
+             - 記得同步更新 <head> 內的 BreadcrumbList JSON-LD
+      ===================================================== -->
+      <nav aria-label="麵包屑導覽" class="breadcrumb-nav container py-2">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="/">首頁</a></li>
+          <!-- 若有中間分類層，於此處新增一個 breadcrumb-item -->
+          <li class="breadcrumb-item active" aria-current="page">嘉義指南</li>
+        </ol>
+      </nav>
+      <!-- /麵包屑導覽 -->
+
+      <!-- =====================================================
+           主內容區塊（兩欄 RWD 佈局）
+           ・site-main：專案 layout.css 的 max-width 與版面間距
+           ・container py-0：Bootstrap 響應式容器與垂直留白
+           ・id="main-content"：供無障礙跳轉錨點使用
+           ・內部使用 Bootstrap row 建立兩欄架構：
+             左欄 col-md-3 → TOC 側欄（桌機 sticky，手機橫向捲動）
+             右欄 col-md-9 → 主要圖文內容
+      ===================================================== -->
+      <main class="site-main container py-0" id="main-content">
+        <div class="row align-items-start">
+          <!-- ===================================================
+               注意：row 必須保留 align-items-start
+               ・Bootstrap row 預設將欄高撐滿，會讓 aside sticky 失效
+               ・align-items-start 使 aside 保持自然高度，sticky 才能運作
+          =================================================== -->
+
+          <!-- =====================================================
+               TOC 側欄（左欄）
+               ・col-12：手機版佔滿整行，顯示在內文上方
+               ・col-md-2：桌機版佔 2 格寬，與麵包屑左緣對齊
+               ・sticky-md-top：Bootstrap 5 響應式 sticky，
+                 只在 md（≥768px）以上生效；手機版自然流動，不固定
+               ・align-self-md-start：防止側欄被撐滿父欄高度（sticky 必要條件）
+               ・style="top: 140px"：讓側欄錯開頂部固定導覽列的高度
+                 （header + nav 兩層合計約 140px，與 scroll-padding-top 保持一致）
+          ===================================================== -->
+          <aside
+            class="col-12 col-md-2 sticky-md-top align-self-md-start"
+            style="top: 140px"
+          >
+            <!-- ===============================================
+                 頁內目錄導覽（TOC）
+                 ・d-flex flex-column align-items-stretch：
+                   所有斷點一律由上而下排列，每個膠囊獨佔一列
+                   align-items-stretch 使膠囊撐滿側欄寬度，文字置中
+                 【組員提醒】href 必須與右欄 <section id="..."> 保持同步
+            =============================================== -->
+            <span class="d-block small text-muted mb-1 text-center"
+              >快速搜尋</span
+            >
+            <nav
+              class="d-flex flex-column align-items-stretch toc-nav"
+              aria-label="頁內目錄"
+            >
+              <!-- 【組員填寫 TOC 連結】將下方換成實際章節名稱，href 對應右欄 section id -->
+              <a
+                href="#spots"
+                class="btn btn-sm btn-outline-success rounded-pill m-2"
+                >嘉義市區景點</a
+              >
+              <a
+                href="#minxiong"
+                class="btn btn-sm btn-outline-success rounded-pill m-2"
+                >民雄周邊</a
+              >
+              <a
+                href="#food"
+                class="btn btn-sm btn-outline-success rounded-pill m-2"
+                >在地美食</a
+              >
+              <a
+                href="#itinerary"
+                class="btn btn-sm btn-outline-success rounded-pill m-2"
+                >行程建議</a
+              >
+            </nav>
+          </aside>
+          <!-- /TOC 側欄 -->
+
+          <!-- =====================================================
+               主要圖文內容（右欄）
+               ・col-12：手機版佔滿整行
+               ・col-md-10：桌機版佔 10 格寬（搭配左欄 col-md-2，合計 12）
+          ===================================================== -->
+          <article class="col-12 col-md-10">
+            <!-- ===============================================
+                 【組員從這裡開始填寫內容】
+
+                 規定：
+                 ・每頁只能有一個 <h1>，不得省略
+                 ・<h1> 必須包含本頁核心關鍵字
+                 ・標題層級依結構遞進：h1 → h2 → h3，不得跳層
+                 ・重要文字必須直接寫在 HTML 中，不得只靠 JS 產生
+                 ・<section id="..."> 的 id 必須與左欄 TOC href 一致
+            =============================================== -->
+
+            <!-- Page intro -->
+            <section class="chiayi-intro" aria-labelledby="page-title">
+              <h1 id="page-title">嘉義景點與在地旅遊資訊</h1>
+              <p class="intro-lead">
+                嘉義是台灣西南部充滿在地特色的城市，以阿里山、火雞肉飯與日式建築文化著名。<br />
+                無論是在中正大學就讀的學生，還是初次造訪嘉義的旅客，這裡整理了常見的熱門景點、在地美食方向與行程規劃參考。
+              </p>
+              <div class="hero-tags">
+                <span class="tag">嘉義景點</span>
+                <span class="tag">嘉義美食</span>
+                <span class="tag">阿里山</span>
+                <span class="tag">打卡景點</span>
+              </div>
+            </section>
+
+            <!-- Section: 嘉義市區景點 -->
+            <section
+              class="content-section"
+              id="spots"
+              aria-labelledby="spots-title"
+            >
+              <h2 id="spots-title">嘉義市區熱門景點</h2>
+
+              <p>
+                嘉義市保留了許多日治時期的木造與磚造建築，融合了歷史文化與現代藝術空間，
+                適合步行探索或半日遊。以下為幾個常被提及的景點方向，
+                <strong>實際開放時間與票價請以各景點官方公告為準</strong>。
+              </p>
+
+              <div class="card-grid">
+                <article class="chiayi-card">
+                  <h3>檜意森活村</h3>
+                  <div class="card-tags">
+                    <span class="tag">日式建築</span>
+                    <span class="tag">文化園區</span>
+                    <span class="tag">免費入場</span>
+                  </div>
+                  <p>
+                    前身為日治時期阿里山林業的官舍群，現規劃為文化展覽與商店街。
+                    保留完整的檜木建築群，是嘉義市內拍照打卡的熱門去處。
+                  </p>
+                </article>
+
+                <article class="chiayi-card">
+                  <h3>嘉義公園</h3>
+                  <div class="card-tags">
+                    <span class="tag">城市公園</span>
+                    <span class="tag">歷史景點</span>
+                  </div>
+                  <p>
+                    嘉義市歷史較悠久的城市公園，園內有射日塔可俯瞰市區景色，
+                    也有部分日治時代留下的遺跡與植栽，適合散步。
+                  </p>
+                </article>
+
+                <article class="chiayi-card">
+                  <h3>嘉義市立美術館</h3>
+                  <div class="card-tags">
+                    <span class="tag">當代藝術</span>
+                    <span class="tag">展覽空間</span>
+                  </div>
+                  <p>
+                    由菸酒公賣局舊廠房改建，是嘉義市的重要藝文空間。
+                    定期舉辦當代藝術展覽，建築本身兼具工業感與設計感。
+                  </p>
+                </article>
+
+                <article class="chiayi-card">
+                  <h3>文化路夜市</h3>
+                  <div class="card-tags">
+                    <span class="tag">夜市</span>
+                    <span class="tag">在地美食</span>
+                  </div>
+                  <p>
+                    嘉義市區最主要的夜市之一，涵蓋多種在地小吃與攤位。
+                    週末人潮較多，適合晚間覓食或感受嘉義夜生活氛圍。
+                  </p>
+                </article>
+
+                <article class="chiayi-card">
+                  <h3>北回歸線地標</h3>
+                  <div class="card-tags">
+                    <span class="tag">地理地標</span>
+                    <span class="tag">嘉義縣</span>
+                  </div>
+                  <p>
+                    位於嘉義縣水上鄉的北回歸線紀念碑，是台灣具有地理教育意義的景點。
+                    距嘉義市區不遠，適合順路參觀。
+                  </p>
+                </article>
+
+                <article class="chiayi-card">
+                  <h3>阿里山國家風景區</h3>
+                  <div class="card-tags">
+                    <span class="tag">山岳景觀</span>
+                    <span class="tag">登山健行</span>
+                    <span class="tag">日出雲海</span>
+                  </div>
+                  <p>
+                    嘉義最具代表性的觀光地，以神木、雲海、日出與小火車聞名。
+                    從嘉義市區搭乘公路客運可到達，建議提前查詢班次與票務資訊。
+                  </p>
+                </article>
+              </div>
+            </section>
+
+            <!-- Section: 民雄周邊 -->
+            <section
+              class="content-section"
+              id="minxiong"
+              aria-labelledby="minxiong-title"
+            >
+              <h2 id="minxiong-title">民雄周邊景點</h2>
+
+              <p>
+                民雄鄉是中正大學所在地，除了大學校園本身，周邊也有一些值得一探的景點。
+              </p>
+
+              <div class="card-grid">
+                <article class="chiayi-card">
+                  <h3>中正大學校園</h3>
+                  <div class="card-tags">
+                    <span class="tag">大學校園</span>
+                    <span class="tag">校園散步</span>
+                  </div>
+                  <p>
+                    中正大學校園佔地廣闊，綠化良好，是民雄鄉的重要地標。
+                    校內的景觀步道與湖泊區域是學生課餘散步的熱門路線。
+                  </p>
+                </article>
+
+                <article class="chiayi-card">
+                  <h3>民雄鬼屋</h3>
+                  <div class="card-tags">
+                    <span class="tag">特色景點</span>
+                    <span class="tag">歷史建築</span>
+                  </div>
+                  <p>
+                    民雄鄉著名的日治時代洋樓建築，因長期廢棄而流傳多種傳說故事，
+                    是台灣知名的民間傳說景點之一，也是攝影創作的熱門取景地。
+                  </p>
+                </article>
+
+                <article class="chiayi-card">
+                  <h3>民雄農村酒莊</h3>
+                  <div class="card-tags">
+                    <span class="tag">在地特產</span>
+                    <span class="tag">休閒農業</span>
+                  </div>
+                  <p>
+                    民雄地區有農業相關的酒莊與特色產業，部分提供參觀與購買在地農產品。
+                    詳細資訊請以當地公告為準。
+                  </p>
+                </article>
+              </div>
+            </section>
+
+            <!-- Section: 在地美食 -->
+            <section
+              class="content-section"
+              id="food"
+              aria-labelledby="food-title"
+            >
+              <h2 id="food-title">嘉義在地美食方向</h2>
+
+              <p>
+                嘉義有幾種在台灣頗具知名度的在地飲食文化。以下列出常被提及的類型，
+                各種選擇在嘉義市區均可找到，<strong>不列特定店家資料，以免資訊過時</strong>。
+                建議到嘉義後依在地人推薦或即時搜尋尋找適合的店家。
+              </p>
+
+              <div class="chiayi-food-list">
+                <div class="chiayi-food-item">
+                  <h3>火雞肉飯</h3>
+                  <p>
+                    嘉義最具代表性的在地料理，以火雞肉切片覆蓋白飯，淋上雞油與醬汁。
+                    早餐或午餐時段均有供應，在嘉義市區四處可見。
+                  </p>
+                </div>
+
+                <div class="chiayi-food-item">
+                  <h3>嘉義雞肉飯周邊小吃</h3>
+                  <p>
+                    除了主食，嘉義常見的小吃配菜包含魯筍、苦瓜湯、豬血湯等，
+                    與火雞肉飯搭配食用是嘉義人常見的早午餐組合。
+                  </p>
+                </div>
+
+                <div class="chiayi-food-item">
+                  <h3>方塊酥與嘉義糕點</h3>
+                  <p>
+                    嘉義有多間老字號糕點店，方塊酥是當地常見的伴手禮選項之一。
+                    在嘉義火車站周邊或市區可找到多種選擇。
+                  </p>
+                </div>
+
+                <div class="chiayi-food-item">
+                  <h3>文化路夜市小吃</h3>
+                  <p>
+                    嘉義文化路夜市涵蓋多種在地小吃，包含芋頭大福、涼麵、
+                    海產攤等，是體驗嘉義夜市文化的入門選擇。
+                  </p>
+                </div>
+              </div>
+
+              <div class="info-box">
+                <p>
+                  若想查詢美食的詳細地點、評價與即時資訊，建議使用 Google Maps
+                  或 在地美食社群進行搜尋，以取得最新且準確的店家資料。
+                </p>
+              </div>
+
+              <p>
+                中正大學校園附近的民雄美食資訊，請參考
+                <a href="/food.html">美食指南</a>。
+              </p>
+            </section>
+
+            <!-- Section: 行程建議 -->
+            <section
+              class="content-section"
+              id="itinerary"
+              aria-labelledby="itinerary-title"
+            >
+              <h2 id="itinerary-title">行程規劃參考</h2>
+
+              <p>
+                以下提供幾種不同目的的嘉義行程架構，作為規劃參考。
+                實際景點開放時間與交通方式請以最新資訊確認。
+              </p>
+
+              <article>
+                <h3>半日文化散步（嘉義市區）</h3>
+                <table class="chiayi-itinerary-table">
+                  <thead>
+                    <tr>
+                      <th>時段</th>
+                      <th>地點</th>
+                      <th>說明</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>上午</td>
+                      <td>檜意森活村</td>
+                      <td>參觀日式建築群，約 1–1.5 小時</td>
+                    </tr>
+                    <tr>
+                      <td>午餐</td>
+                      <td>嘉義市區</td>
+                      <td>嘉義火雞肉飯與在地小吃</td>
+                    </tr>
+                    <tr>
+                      <td>下午</td>
+                      <td>嘉義市立美術館</td>
+                      <td>欣賞展覽，約 1–2 小時（視展期）</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+
+              <article>
+                <h3>一日自然與文化（含阿里山方向）</h3>
+                <table class="chiayi-itinerary-table">
+                  <thead>
+                    <tr>
+                      <th>時段</th>
+                      <th>地點</th>
+                      <th>說明</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>清晨</td>
+                      <td>阿里山</td>
+                      <td>日出與雲海（建議提前查詢住宿與交通）</td>
+                    </tr>
+                    <tr>
+                      <td>上午</td>
+                      <td>阿里山森林遊樂區</td>
+                      <td>神木步道、小火車（需購票）</td>
+                    </tr>
+                    <tr>
+                      <td>下午</td>
+                      <td>嘉義市區</td>
+                      <td>返回市區，逛嘉義公園或景點</td>
+                    </tr>
+                    <tr>
+                      <td>晚上</td>
+                      <td>文化路夜市</td>
+                      <td>體驗嘉義夜市小吃文化</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+
+              <article>
+                <h3>學生省力版（附近玩一天）</h3>
+                <p>若是中正大學在校生，假日想在附近走走而不想跑太遠：</p>
+                <ul>
+                  <li>上午：民雄老街與傳統市場採購或早餐</li>
+                  <li>下午：搭公車或機車進嘉義市區，逛檜意森活村或博物館</li>
+                  <li>傍晚：嘉義火車站周邊用餐，再返回民雄</li>
+                </ul>
+                <p>
+                  前往嘉義市區的交通方式，請參考
+                  <a href="/traffic.html">交通指南</a>。
+                </p>
+              </article>
+            </section>
+
+            <!-- 更多內容區塊請繼續往下擴展 -->
+          </article>
+          <!-- /主要圖文內容 -->
+        </div>
+        <!-- /.row -->
+      </main>
+      <!-- /主內容區塊 -->
+
+      <!-- 回到頂部按鈕（由 js/main.js 的 initBackToTop() 控制顯示） -->
+      <button class="back-to-top" aria-label="回到頂端">&#8679;</button>
+
+      <!-- =====================================================
+           全站頁尾（各頁保持一致，請勿修改此區塊）
+      ===================================================== -->
+      <footer class="site-footer" aria-label="頁尾">
+        <div class="footer-inner">
+          <p class="footer-desc">
+            CCU Chiayi Guide 是一個以 SEO/SEM 課程為核心的靜態網站，
+            整理中正大學新生與嘉義旅客需要的實用在地資訊。
+          </p>
+          <nav class="footer-nav" aria-label="頁尾導覽">
+            <ul>
+              <li><a href="/">首頁</a></li>
+              <li><a href="/food.html">美食指南</a></li>
+              <li><a href="/traffic.html">交通指南</a></li>
+              <li><a href="/chiayi.html">嘉義指南</a></li>
+            </ul>
+          </nav>
+          <p class="footer-copyright">
+            © 2026 CCU Chiayi Guide.
+            本站內容以真實在地資訊為準，不捏造店家資料。
+          </p>
+        </div>
+      </footer>
+      <!-- /頁尾 -->
+    </div>
+    <!-- /.site-wrapper -->
+
+    <!-- 全站共用 JS（手機導覽、回到頂部、平滑捲動）-->
+    <script src="/js/main.js" defer></script>
+
+    <!-- 頁面專用 JS（若本頁有互動功能再取消註解，檔名依頁名命名）-->
+    <!-- <script src="/js/pages/chiayi.js" defer></script> -->
+  </body>
+</html>

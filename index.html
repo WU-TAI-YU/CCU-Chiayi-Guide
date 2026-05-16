@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>中正大學宿舍與新生生活指南｜CCU Guide</title>
+    <meta
+      name="description"
+      content="整理中正大學宿舍、新生生活、美食與交通資訊，幫助準大學生快速了解中正大學校園環境與民雄生活圈。"
+    />
+    <link rel="canonical" href="https://ccu-chiayi-guide.site/" />
+
+    <!-- Bootstrap 5 CSS (no JS) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      crossorigin="anonymous"
+    />
+
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/pages/index.css" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "CCU Chiayi Guide",
+          "alternateName": "中正大學新生與嘉義生活指南",
+          "url": "https://ccu-chiayi-guide.site"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "中正大學宿舍與新生生活指南｜CCU Guide",
+          "description": "整理中正大學宿舍、新生生活、美食與交通資訊，幫助準大學生快速了解中正大學校園環境與民雄生活圈。",
+          "url": "https://ccu-chiayi-guide.site/",
+          "inLanguage": "zh-TW",
+          "isPartOf": {
+            "@type": "WebSite",
+            "url": "https://ccu-chiayi-guide.site"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "首頁",
+              "item": "https://ccu-chiayi-guide.site/"
+            }
+          ]
+        }
+      ]
+    </script>
+  </head>
+  <body>
+    <div class="site-wrapper">
+      <!-- Sticky header + nav wrapper -->
+      <div class="sticky-header-wrap">
+        <header class="site-header" role="banner">
+          <div class="header-inner">
+            <a href="/" class="site-logo" aria-label="CCU Chiayi Guide 首頁">
+              <img
+                src="images/ccu-school-emblem.png"
+                alt="國立中正大學校徽"
+                class="logo-emblem"
+              />
+              <span class="logo-text">
+                CCU Chiayi Guide
+                <span class="logo-sub">中正大學新生與嘉義生活指南</span>
+              </span>
+            </a>
+            <button
+              class="nav-toggle"
+              aria-label="開啟導覽選單"
+              aria-expanded="false"
+              aria-controls="site-nav"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </header>
+
+        <!-- Main Navigation -->
+        <nav class="site-nav" id="site-nav" aria-label="主要導覽">
+          <ul>
+            <li><a href="/" aria-current="page">首頁</a></li>
+            <li><a href="food.html">美食</a></li>
+            <li><a href="traffic.html">交通</a></li>
+            <li><a href="chiayi.html">嘉義</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- /.sticky-header-wrap -->
+
+      <!-- Hero Section -->
+      <section class="index-hero" aria-labelledby="page-title">
+        <img
+          src="images/ccu-campus-hero.jpg"
+          alt="中正大學民雄在地名產鳳梨與新生生活指南"
+          class="hero-bg-img"
+        />
+        <div
+          class="hero-content d-flex flex-column justify-content-center align-items-center text-center"
+        >
+          <h1 id="page-title">中正大學宿舍與新生生活指南</h1>
+          <p class="hero-lead">
+            剛收到中正大學錄取通知，不知道宿舍怎麼選、民雄生活怎麼規劃？
+            這裡整理了新生最常需要的資訊，幫你快速掌握校園環境與嘉義生活圈。
+          </p>
+          <div class="hero-tags">
+            <span class="tag">中正大學宿舍</span>
+            <span class="tag">新生生活</span>
+            <span class="tag">民雄</span>
+            <span class="tag">嘉義</span>
+          </div>
+          <a href="#freshman" class="hero-cta">開始探索新生攻略</a>
+        </div>
+      </section>
+
+      <!-- Main Content -->
+      <main id="main-content" class="index-main" aria-labelledby="page-title">
+        <!-- Page anchor nav -->
+        <nav class="page-anchor-nav" aria-label="頁內快速跳轉">
+          <span>跳至：</span>
+          <a href="#freshman">新生必知</a>
+          <a href="#dorm">宿舍概覽</a>
+          <a href="#explore">延伸探索</a>
+        </nav>
+
+        <!-- Section: Freshman tips -->
+        <section
+          class="content-section"
+          id="freshman"
+          aria-labelledby="freshman-title"
+        >
+          <h2 id="freshman-title">新生必知事項</h2>
+
+          <article>
+            <h3>交通與移動</h3>
+            <p>
+              中正大學位於民雄鄉，距離嘉義市區約 10–15 分鐘車程。
+              校園附近大眾運輸班次有限，許多學生在入學後選擇購買機車方便移動。
+              若暫時沒有機車，可以使用校內或周邊的公車路線往返嘉義市區。
+            </p>
+            <p>詳細交通資訊請參考 <a href="traffic.html">交通指南</a>。</p>
+          </article>
+
+          <article>
+            <h3>民雄周邊用餐</h3>
+            <p>
+              中正大學附近的民雄鄉有多處用餐選擇，包含學生常去的麵食、便當、
+              小吃店與夜市攤位。校內也設有學生餐廳，提供午晚餐選項。
+            </p>
+            <p>詳細美食資訊請參考 <a href="food.html">美食指南</a>。</p>
+          </article>
+
+          <article>
+            <h3>生活採購</h3>
+            <p>
+              民雄市區有超商、超市與傳統市場，日常採購需求可在周邊解決。
+              若需要更大型的購物中心或特定商品，嘉義市區選擇更多，
+              搭乘公車或機車約 15 分鐘可到達。
+            </p>
+          </article>
+
+          <article>
+            <h3>新生入學時程</h3>
+            <p>
+              每年新生報到與宿舍入住時間依學校公告為準。
+              建議提前關注中正大學官網的新生專區，了解報到流程、必備文件與入住安排。
+            </p>
+          </article>
+        </section>
+
+        <!-- Section: Dorm -->
+        <section class="content-section" id="dorm" aria-labelledby="dorm-title">
+          <h2 id="dorm-title">中正大學宿舍概覽</h2>
+
+          <div class="info-box">
+            <p>
+              中正大學位於嘉義縣民雄鄉，校園佔地廣闊，宿舍分布在校園不同區域。
+              新生入住前建議透過學校宿舍組官網確認最新床位資訊與申請期程，
+              本頁提供概念性說明，實際細節以學校公告為準。
+            </p>
+          </div>
+
+          <article>
+            <h3>宿舍選擇方向</h3>
+            <p>
+              中正大學提供男女分棟的宿舍設施。各宿舍在位置、設備與房型上有所差異，
+              常見的考量包含：
+            </p>
+            <ul>
+              <li>
+                <strong>距離系館或教室的遠近</strong
+                >：校園較大，宿舍位置影響每天通勤時間
+              </li>
+              <li>
+                <strong>房型</strong>：通常分為多人宿舍或雙人套房等不同規格
+              </li>
+              <li><strong>設施</strong>：是否附冷氣、洗衣機、網路等基本設備</li>
+              <li>
+                <strong>費用</strong
+                >：不同宿舍的住宿費用可能有差異，請以學校最新公告為準
+              </li>
+            </ul>
+          </article>
+
+          <div class="index-dorm-list" role="list">
+            <div class="dorm-item" role="listitem">
+              <h3>男宿區</h3>
+              <p>提供多棟男生宿舍選擇，各棟距離不同系館的遠近有所差異。</p>
+            </div>
+            <div class="dorm-item" role="listitem">
+              <h3>女宿區</h3>
+              <p>提供多棟女生宿舍選擇，部分宿舍有套房型配置。</p>
+            </div>
+            <div class="dorm-item" role="listitem">
+              <h3>研究生宿舍</h3>
+              <p>針對碩博士生設有獨立宿舍區域，空間配置通常較為寬裕。</p>
+            </div>
+            <div class="dorm-item" role="listitem">
+              <h3>宿舍申請</h3>
+              <p>每年申請期程不同，請關注中正大學宿舍組官網與新生入學通知。</p>
+            </div>
+          </div>
+
+          <p>
+            詳細的宿舍棟別、住宿費、申請時程與床位查詢，請至
+            <strong>中正大學宿舍組官網</strong>確認最新公告。
+          </p>
+        </section>
+
+        <!-- Section: Explore -->
+        <section
+          class="content-section index-quick-nav"
+          id="explore"
+          aria-labelledby="explore-title"
+        >
+          <h2 id="explore-title">延伸探索</h2>
+          <p>
+            除了宿舍與新生生活，這個網站也整理了周邊美食、交通方式與嘉義景點資訊。
+          </p>
+
+          <div class="card-grid">
+            <article class="card">
+              <h3 class="card-title">中正大學附近美食</h3>
+              <div class="card-body">
+                <p>
+                  整理民雄市區與校內的用餐選擇，包含學生常去的餐廳類型與新生用餐建議。
+                </p>
+              </div>
+              <a href="food.html" class="card-link">前往美食指南</a>
+            </article>
+
+            <article class="card">
+              <h3 class="card-title">前往中正大學的交通</h3>
+              <div class="card-body">
+                <p>
+                  從嘉義火車站、民雄火車站或高鐵嘉義站前往中正大學的方式整理。
+                </p>
+              </div>
+              <a href="traffic.html" class="card-link">前往交通指南</a>
+            </article>
+
+            <article class="card">
+              <h3 class="card-title">嘉義景點與在地美食</h3>
+              <div class="card-body">
+                <p>
+                  整理嘉義市區景點、民雄周邊景點與嘉義在地美食，適合課餘或家長到訪時安排。
+                </p>
+              </div>
+              <a href="chiayi.html" class="card-link">前往嘉義指南</a>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="site-footer" aria-label="頁尾">
+        <div class="footer-inner">
+          <p class="footer-desc">
+            CCU Chiayi Guide 是一個以 SEO/SEM 課程為核心的靜態網站，
+            整理中正大學新生與嘉義旅客需要的實用在地資訊。
+          </p>
+          <nav class="footer-nav" aria-label="頁尾導覽">
+            <ul>
+              <li><a href="/">首頁</a></li>
+              <li><a href="food.html">美食指南</a></li>
+              <li><a href="traffic.html">交通指南</a></li>
+              <li><a href="chiayi.html">嘉義指南</a></li>
+            </ul>
+          </nav>
+          <p class="footer-copyright">
+            © 2026 CCU Chiayi Guide.
+            本站內容以真實在地資訊為準，不捏造店家資料。
+          </p>
+        </div>
+      </footer>
+
+      <!-- Back to top -->
+      <button class="back-to-top" aria-label="回到頂端">&#8679;</button>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
