@@ -3,12 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>中正大學宿舍與新生生活指南｜CCU Chiayi Guide</title>
+    <title>中正大學新生與宿舍生活指南｜CCU Chiayi Guide</title>
     <meta
       name="description"
       content="整理中正大學宿舍、新生生活、美食與交通資訊，幫助準大學生快速了解中正大學校園環境與民雄生活圈。"
     />
     <link rel="canonical" href="https://ccu-chiayi-guide.site/" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/ccu-school-emblem.png" />
+    <link rel="apple-touch-icon" href="images/ccu-school-emblem.png" />
 
     <!-- Bootstrap 5 CSS (no JS) -->
     <link
@@ -61,6 +65,11 @@
     </script>
   </head>
   <body>
+    <!-- Splash Screen -->
+    <div id="splash-screen" class="splash-screen" aria-hidden="true">
+      <img src="images/ccu-chiayi-logo.png" alt="" class="splash-logo" />
+    </div>
+
     <div class="site-wrapper">
       <!-- Sticky header + nav wrapper -->
       <div class="sticky-header-wrap">
@@ -68,8 +77,8 @@
           <div class="header-inner">
             <a href="/" class="site-logo" aria-label="CCU Chiayi Guide 首頁">
               <img
-                src="images/ccu-school-emblem.png"
-                alt="國立中正大學校徽"
+                src="images/ccu-chiayi-logo.png"
+                alt="CCU Chiayi Guide 網站標誌"
                 class="logo-emblem"
               />
               <span class="logo-text">
@@ -313,5 +322,6 @@
     </div>
 
     <script src="js/main.js"></script>
+    <script src="js/pages/index.js"></script>
   </body>
 </html>
