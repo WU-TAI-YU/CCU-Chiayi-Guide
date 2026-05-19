@@ -132,20 +132,45 @@
           </div>
         </header>
 
-        <!-- 主要導覽
-             【組員提醒】將本頁對應的 <a> 加上 aria-current="page"
-             例如：<a href="food.html" aria-current="page">美食</a>
-        -->
+        <!-- Main Navigation -->
         <nav class="site-nav" id="site-nav" aria-label="主要導覽">
           <ul>
-            <li><a href="/">首頁</a></li>
-            <li><a href="/chiayi.html">嘉義</a></li>
-            <li><a href="/xxx.html">民雄</a></li>
-            <li><a href="/xxx.html">中正大學</a></li>
+            <li><a href="/" aria-current="page">首頁</a></li>
+            <li class="has-submenu">
+              <button type="button">
+                嘉義 <span class="nav-arrow" aria-hidden="true">▾</span>
+              </button>
+              <ul class="nav-submenu" aria-label="嘉義子選單">
+                <li><a href="/chiayi/index.html">嘉義總覽</a></li>
+                <li><a href="/chiayi/food.html">嘉義美食</a></li>
+                <li><a href="/chiayi/attraction.html">嘉義景點</a></li>
+              </ul>
+            </li>
+            <li class="has-submenu">
+              <button type="button">
+                民雄 <span class="nav-arrow" aria-hidden="true">▾</span>
+              </button>
+              <ul class="nav-submenu" aria-label="民雄子選單">
+                <li><a href="/minxiong/index.html">民雄總覽</a></li>
+                <li><a href="#">民雄美食</a></li>
+                <li><a href="/minsyong-attraction.html">民雄景點</a></li>
+              </ul>
+            </li>
+            <li class="has-submenu">
+              <button type="button">
+                中正大學 <span class="nav-arrow" aria-hidden="true">▾</span>
+              </button>
+              <ul class="nav-submenu" aria-label="中正大學子選單">
+                <li><a href="/ccu/index.html">中正大學總覽</a></li>
+                <li><a href="#">新生懶人包</a></li>
+                <li><a href="/traffic.html">交通資訊</a></li>
+                <li><a href="#">租屋事項</a></li>
+              </ul>
+            </li>
           </ul>
         </nav>
       </div>
-      <!-- /.sticky-header-wrap（固定區塊結束） -->
+      <!-- /.sticky-header-wrap -->
 
       <!-- =====================================================
            麵包屑導覽（非固定，隨頁面自然滾動離開螢幕）
@@ -159,8 +184,9 @@
       ===================================================== -->
       <nav aria-label="麵包屑導覽" class="breadcrumb-nav container py-2">
         <ol class="breadcrumb mb-0">
-          <li class="breadcrumb-item"><a href="/">首頁</a></li>
-          <!-- 若有中間分類層，於此處新增一個 breadcrumb-item -->
+          <li class="breadcrumb-item"><a href="../index.html">首頁</a></li>
+          <li class="breadcrumb-item"><a href="#">分類名稱</a></li>
+          <li class="breadcrumb-item"><a href="#">分類大廳名稱</a></li>
           <li class="breadcrumb-item active" aria-current="page">
             目前頁面名稱
           </li>
@@ -290,10 +316,10 @@
           </p>
           <nav class="footer-nav" aria-label="頁尾導覽">
             <ul>
-              <li><a href="/">首頁</a></li>
-              <li><a href="/chiayi.html">嘉義指南</a></li>
-              <li><a href="/xxx.html">民雄指南</a></li>
-              <li><a href="/xxx.html">中正大學</a></li>
+              <li><a href="../index.html">首頁</a></li>
+              <li><a href="../chiayi/index.html">嘉義總覽</a></li>
+              <li><a href="../minxiong/index.html">民雄總覽</a></li>
+              <li><a href="../ccu/index.html">中正大學總覽</a></li>
             </ul>
           </nav>
           <p class="footer-copyright">

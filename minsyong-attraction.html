@@ -136,15 +136,37 @@
         </header>
 
         <!-- 主要導覽
-             【組員提醒】將本頁對應的 <a> 加上 aria-current="page"
-             例如：<a href="food.html" aria-current="page">美食</a>
+             【組員提醒】將本頁對應的子選單 <a> 加上 aria-current="page"
+             例如：<a href="/minsyong-attraction.html" aria-current="page">民雄景點</a>
         -->
         <nav class="site-nav" id="site-nav" aria-label="主要導覽">
           <ul>
             <li><a href="/">首頁</a></li>
-            <li><a href="/chiayi.html">嘉義</a></li>
-            <li><a href="/xxx.html">民雄</a></li>
-            <li><a href="/xxx.html">中正大學</a></li>
+            <li class="has-submenu">
+              <button type="button">嘉義 <span class="nav-arrow" aria-hidden="true">▾</span></button>
+              <ul class="nav-submenu" aria-label="嘉義子選單">
+                <li><a href="/chiayi/index.html">嘉義總覽</a></li>
+                <li><a href="/chiayi/food.html">嘉義美食</a></li>
+                <li><a href="/chiayi/attraction.html">嘉義景點</a></li>
+              </ul>
+            </li>
+            <li class="has-submenu">
+              <button type="button" aria-current="true">民雄 <span class="nav-arrow" aria-hidden="true">▾</span></button>
+              <ul class="nav-submenu" aria-label="民雄子選單">
+                <li><a href="/minxiong/index.html">民雄總覽</a></li>
+                <li><a href="#">民雄美食</a></li>
+                <li><a href="/minsyong-attraction.html" aria-current="page">民雄景點</a></li>
+              </ul>
+            </li>
+            <li class="has-submenu">
+              <button type="button">中正大學 <span class="nav-arrow" aria-hidden="true">▾</span></button>
+              <ul class="nav-submenu" aria-label="中正大學子選單">
+                <li><a href="/ccu/index.html">中正大學總覽</a></li>
+                <li><a href="#">新生懶人包</a></li>
+                <li><a href="/traffic.html">交通資訊</a></li>
+                <li><a href="#">租屋事項</a></li>
+              </ul>
+            </li>
           </ul>
         </nav>
       </div>
