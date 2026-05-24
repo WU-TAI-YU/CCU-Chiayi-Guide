@@ -23,7 +23,7 @@
       name="description"
       content="整理中正大學宿舍、新生生活、美食與交通資訊，幫助準大學生快速了解中正大學校園環境與民雄生活圈。"
     />
-    <link rel="canonical" href="https://ccu-chiayi-guide.site/" />
+    <link rel="canonical" href="https://www.ccu-chiayi-guide.site/" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/ccu-school-emblem.png" />
@@ -50,18 +50,18 @@
           "@type": "WebSite",
           "name": "CCU Chiayi Guide",
           "alternateName": "中正大學新生與嘉義生活指南",
-          "url": "https://ccu-chiayi-guide.site"
+          "url": "https://www.ccu-chiayi-guide.site"
         },
         {
           "@context": "https://schema.org",
           "@type": "WebPage",
           "name": "中正大學宿舍與新生生活指南｜CCU Guide",
           "description": "整理中正大學宿舍、新生生活、美食與交通資訊，幫助準大學生快速了解中正大學校園環境與民雄生活圈。",
-          "url": "https://ccu-chiayi-guide.site/",
+          "url": "https://www.ccu-chiayi-guide.site/",
           "inLanguage": "zh-TW",
           "isPartOf": {
             "@type": "WebSite",
-            "url": "https://ccu-chiayi-guide.site"
+            "url": "https://www.ccu-chiayi-guide.site"
           }
         },
         {
@@ -72,7 +72,7 @@
               "@type": "ListItem",
               "position": 1,
               "name": "首頁",
-              "item": "https://ccu-chiayi-guide.site/"
+              "item": "https://www.ccu-chiayi-guide.site/"
             }
           ]
         }
@@ -118,9 +118,37 @@
         <nav class="site-nav" id="site-nav" aria-label="主要導覽">
           <ul>
             <li><a href="/" aria-current="page">首頁</a></li>
-            <li><a href="chiayi.html">嘉義</a></li>
-            <li><a href="xxx.html">民雄</a></li>
-            <li><a href="xxx.html">中正大學</a></li>
+            <li class="has-submenu">
+              <button type="button">
+                嘉義 <span class="nav-arrow" aria-hidden="true">▾</span>
+              </button>
+              <ul class="nav-submenu" aria-label="嘉義子選單">
+                <li><a href="/chiayi/index.html">嘉義總覽</a></li>
+                <li><a href="/chiayi/food.html">嘉義美食</a></li>
+                <li><a href="/chiayi/attraction.html">嘉義景點</a></li>
+              </ul>
+            </li>
+            <li class="has-submenu">
+              <button type="button">
+                民雄 <span class="nav-arrow" aria-hidden="true">▾</span>
+              </button>
+              <ul class="nav-submenu" aria-label="民雄子選單">
+                <li><a href="/minxiong/index.html">民雄總覽</a></li>
+                <li><a href="/minxiong/food.html">民雄美食</a></li>
+                <li><a href="/minxiong/attraction.html">民雄景點</a></li>
+              </ul>
+            </li>
+            <li class="has-submenu">
+              <button type="button">
+                中正大學 <span class="nav-arrow" aria-hidden="true">▾</span>
+              </button>
+              <ul class="nav-submenu" aria-label="中正大學子選單">
+                <li><a href="/ccu/index.html">中正大學總覽</a></li>
+                <li><a href="/ccu/ccu-campus-life.html">新生懶人包</a></li>
+                <li><a href="/ccu/ccu-transport.html">交通資訊</a></li>
+                <li><a href="/ccu-housing.html">租屋事項</a></li>
+              </ul>
+            </li>
           </ul>
         </nav>
       </div>
@@ -320,9 +348,9 @@
           <nav class="footer-nav" aria-label="頁尾導覽">
             <ul>
               <li><a href="/">首頁</a></li>
-              <li><a href="food.html">美食指南</a></li>
-              <li><a href="traffic.html">交通指南</a></li>
-              <li><a href="chiayi.html">嘉義指南</a></li>
+              <li><a href="/chiayi/index.html">嘉義總覽</a></li>
+              <li><a href="/minxiong/index.html">民雄總覽</a></li>
+              <li><a href="/ccu/index.html">中正大學總覽</a></li>
             </ul>
           </nav>
           <p class="footer-copyright">

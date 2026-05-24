@@ -1,0 +1,37 @@
+/* ── Page intro ── */
+.chiayi-attraction-intro {
+  padding: var(--spacing-xl) 0 var(--spacing-lg);
+}
+
+.chiayi-attraction-intro .intro-lead {
+  font-size: 1.0625rem;
+  color: var(--color-text-muted);
+  max-width: 700px;
+  margin-top: var(--spacing-md);
+}
+
+/* ── Article grid section ── */
+.site-main section + section {
+  padding-bottom: var(--spacing-xxl);
+}
+
+.site-main section h2 {
+  margin-bottom: var(--spacing-lg);
+}
+
+/* ── Override components.css .card padding so Bootstrap card-img-top spans full width ── */
+.attraction-lobby-grid .card {
+  padding: 0;
+  border-color: var(--color-border);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.attraction-lobby-grid .card-body {
+  padding: var(--spacing-md);
+}
+
+.attraction-lobby-grid .card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  border-color: var(--color-accent);
+}

@@ -1,0 +1,41 @@
+/* ── Page intro ── */
+.chiayi-food-intro {
+  padding: var(--spacing-xl) 0 var(--spacing-lg);
+}
+
+.chiayi-food-intro .intro-lead {
+  font-size: 1.0625rem;
+  color: var(--color-text-muted);
+  max-width: 700px;
+  margin-top: var(--spacing-md);
+}
+
+/* ── Article grid section ── */
+.site-main section + section {
+  padding-bottom: var(--spacing-xxl);
+}
+
+.site-main section h2 {
+  margin-bottom: var(--spacing-lg);
+}
+
+/* ── Override components.css .card padding so Bootstrap card-img-top spans full width ── */
+.food-lobby-grid .card {
+  padding: 0;
+  border-color: var(--color-border);
+}
+
+.food-lobby-grid .card-body {
+  padding: var(--spacing-md);
+}
+
+/* ── Card hover effect (keep consistent with custom .card in components.css) ── */
+.food-lobby-grid .card {
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.food-lobby-grid .card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  border-color: var(--color-accent);
+}

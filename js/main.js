@@ -1,6 +1,12 @@
 (function () {
   'use strict';
 
+  function clearSubmenus(nav) {
+    nav.querySelectorAll('.has-submenu.is-open').forEach(function (el) {
+      el.classList.remove('is-open');
+    });
+  }
+
   function initMobileNav() {
     var toggle = document.querySelector('.nav-toggle');
     var nav = document.querySelector('.site-nav');
@@ -10,6 +16,7 @@
       var expanded = toggle.getAttribute('aria-expanded') === 'true';
       toggle.setAttribute('aria-expanded', String(!expanded));
       nav.classList.toggle('is-open', !expanded);
+      if (expanded) clearSubmenus(nav);
     });
 
     // Close nav when a link is clicked (mobile)
@@ -18,7 +25,22 @@
         if (window.innerWidth < 768) {
           toggle.setAttribute('aria-expanded', 'false');
           nav.classList.remove('is-open');
+          clearSubmenus(nav);
         }
+      });
+    });
+  }
+
+  function initMobileSubmenuToggle() {
+    var nav = document.querySelector('.site-nav');
+    if (!nav) return;
+    nav.querySelectorAll('li.has-submenu > button').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        if (window.innerWidth >= 768) return;
+        var li = btn.closest('.has-submenu');
+        var wasOpen = li.classList.contains('is-open');
+        clearSubmenus(nav);
+        if (!wasOpen) li.classList.add('is-open');
       });
     });
   }
@@ -53,6 +75,7 @@
 
   document.addEventListener('DOMContentLoaded', function () {
     initMobileNav();
+    initMobileSubmenuToggle();
     initBackToTop();
     initSmoothScroll();
   });
