@@ -11,20 +11,20 @@
     gtag('js', new Date());
     gtag('config', 'G-EX4HL59KV2');
   </script>
-  <!-- SEO Meta (依組員規範與關鍵字規劃) -->
-  <title>中正大學交通攻略｜公車火車電動車租屋建議｜CCU Chiayi Guide</title>
-  <meta name="description" content="完整整理前往中正大學的交通方式：民雄火車站、嘉義火車站公車路線、校內電動車使用與車管中心資訊，以及校外租屋區域價格建議，新生生活必備交通懶人包。">
-  <link rel="canonical" href="https://ccu-chiayi-guide.site/ccu/transport.html">
+  <!-- SEO Meta (強化交通/租屋關鍵字) -->
+  <title>中正大學交通攻略｜公車火車時刻・電動車充電站・校外租屋行情｜CCU Chiayi Guide</title>
+  <meta name="description" content="完整整理前往中正大學的交通方式：民雄/嘉義火車站公車路線、校內電動車使用與車管中心資訊，以及民雄校外租屋區域價格比較（含表格）。新生交通租屋必看懶人包。">
+  <link rel="canonical" href="https://ccu-chiayi-guide.site/ccu/ccu-transport.html">
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/images/ccu-school-emblem.png">
   <link rel="apple-touch-icon" href="/images/ccu-school-emblem.png">
-  <!-- Bootstrap 5 CSS (僅 CSS) -->
+  <!-- Bootstrap 5 CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" crossorigin="anonymous">
   <!-- 全站 CSS -->
   <link rel="stylesheet" href="/css/base.css">
   <link rel="stylesheet" href="/css/layout.css">
   <link rel="stylesheet" href="/css/components.css">
-  <!-- 頁面專用 CSS (transport.css) -->
+  <!-- 頁面專用 CSS -->
   <link rel="stylesheet" href="/css/pages/transport.css">
   <!-- JSON-LD Structured Data 麵包屑二層+WebPage -->
   <script type="application/ld+json">
@@ -32,9 +32,9 @@
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "name": "中正大學交通攻略｜公車火車電動車租屋建議",
-        "description": "完整整理前往中正大學的交通方式：民雄火車站、嘉義火車站公車路線、校內電動車使用與車管中心資訊，以及校外租屋區域價格建議，新生生活必備交通懶人包。",
-        "url": "https://ccu-chiayi-guide.site/ccu/transport.html",
+        "name": "中正大學交通攻略｜公車火車租屋行情",
+        "description": "完整整理前往中正大學的交通方式與校外租屋建議",
+        "url": "https://ccu-chiayi-guide.site/ccu/ccu-transport.html",
         "inLanguage": "zh-TW",
         "isPartOf": {
           "@type": "WebSite",
@@ -45,18 +45,8 @@
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "首頁",
-            "item": "https://ccu-chiayi-guide.site/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "交通與移動指南",
-            "item": "https://ccu-chiayi-guide.site/ccu/transport.html"
-          }
+          { "@type": "ListItem", "position": 1, "name": "首頁", "item": "https://ccu-chiayi-guide.site/" },
+          { "@type": "ListItem", "position": 2, "name": "交通與租屋指南", "item": "https://ccu-chiayi-guide.site/ccu/ccu-transport.html" }
         ]
       }
     ]
@@ -64,12 +54,12 @@
 </head>
 <body>
 <div class="site-wrapper">
-  <!-- 固定導覽列（Sticky Header）與首頁完全一致，包含下拉選單 -->
-  <div class="sticky-header-wrap sticky-top">
+  <!-- 固定導覽列（與首頁完全一致的下拉選單結構） -->
+  <div class="sticky-header-wrap">
     <header class="site-header" role="banner">
       <div class="header-inner">
         <a href="/" class="site-logo" aria-label="CCU Chiayi Guide 首頁">
-          <img src="/images/ccu-chiayi-logo.png" alt="CCU Chiayi Guide 網站標誌" class="logo-emblem" width="36" height="36">
+          <img src="/images/ccu-chiayi-logo.png" alt="CCU Chiayi Guide 網站標誌" class="logo-emblem">
           <span class="logo-text">
             CCU Chiayi Guide
             <span class="logo-sub">中正大學新生與嘉義生活指南</span>
@@ -80,7 +70,8 @@
         </button>
       </div>
     </header>
-    <!-- 主要導覽：結構與首頁相同（嘉義｜民雄｜中正大學 下拉式） -->
+
+    <!-- Main Navigation - 與首頁完全相同 -->
     <nav class="site-nav" id="site-nav" aria-label="主要導覽">
       <ul>
         <li><a href="/">首頁</a></li>
@@ -110,16 +101,17 @@
           </button>
           <ul class="nav-submenu" aria-label="中正大學子選單">
             <li><a href="/ccu/index.html">中正大學總覽</a></li>
-            <li><a href="/ccu/campus-life.html">新生懶人包</a></li>
-            <li><a href="/ccu/transport.html" aria-current="page">交通資訊</a></li>
-            <li><a href="#">租屋事項</a></li>
+            <li><a href="/ccu/ccu-campus-life.html">新生懶人包</a></li>
+            <li><a href="/ccu/ccu-transport.html" aria-current="page">交通資訊</a></li>
+            <li><a href="/ccu-housing.html">租屋事項</a></li>
           </ul>
         </li>
       </ul>
     </nav>
   </div>
+  <!-- /.sticky-header-wrap -->
 
-  <!-- 麵包屑導覽（二層：首頁 / 交通與移動指南） -->
+  <!-- 麵包屑導覽 -->
   <nav aria-label="麵包屑導覽" class="breadcrumb-nav container py-2">
     <ol class="breadcrumb mb-0">
       <li class="breadcrumb-item"><a href="/">首頁</a></li>
@@ -127,142 +119,121 @@
     </ol>
   </nav>
 
-  <!-- 主內容區塊（兩欄 RWD 佈局） -->
+  <!-- 主內容區塊 -->
   <main class="site-main container py-0" id="main-content">
     <div class="row align-items-start">
-      <!-- TOC 側欄 (左欄) 響應式導航 -->
+      <!-- TOC 側欄 -->
       <aside class="col-12 col-md-2 sticky-md-top align-self-md-start" style="top: 140px;">
         <span class="d-block small text-muted mb-1 text-center">章節導航</span>
         <nav class="d-flex flex-column align-items-stretch toc-nav" aria-label="頁內目錄">
-          <a href="#bus-train" class="btn btn-sm btn-outline-success rounded-pill m-2">公車 & 火車建議</a>
-          <a href="#ev-scooter" class="btn btn-sm btn-outline-success rounded-pill m-2">電動車／車管中心</a>
-          <a href="#rent-guide" class="btn btn-sm btn-outline-success rounded-pill m-2">校外租屋攻略</a>
-          <a href="#life-function" class="btn btn-sm btn-outline-success rounded-pill m-2">周邊生活機能</a>
+          <a href="#bus-train" class="btn btn-sm btn-outline-success rounded-pill m-2">🚌 公車&火車時刻建議</a>
+          <a href="#ev-scooter" class="btn btn-sm btn-outline-success rounded-pill m-2">⚡ 電動車／車管中心</a>
+          <a href="#rent-guide" class="btn btn-sm btn-outline-success rounded-pill m-2">🏠 校外租屋攻略（含行情表）</a>
+          <a href="#life-function" class="btn btn-sm btn-outline-success rounded-pill m-2">🛒 周邊生活機能</a>
         </nav>
       </aside>
 
-      <!-- 主要圖文內容 (右欄) -->
+      <!-- 主要內容 -->
       <article class="col-12 col-md-10">
-        <!-- 頁面 intro + H1 核心關鍵字 -->
+        <!-- 頁面 intro -->
         <section class="transport-intro" aria-labelledby="page-title">
-          <h1 id="page-title">中正大學交通與移動攻略｜公車・火車・電動車・租屋全指南</h1>
+          <h1 id="page-title">中正大學交通與租屋全攻略｜公車・火車・電動車・校外租屋行情完整指南</h1>
           <p class="intro-lead">
-            剛成為中正新鮮人，煩惱怎麼從火車站到學校？校內可以騎電動車嗎？校外租屋該怎麼選？
-            本篇整理從民雄/嘉義火車站往返的公車路線、電動車使用規範、車管中心資訊，
-            以及民雄租屋行情與注意事項，讓你第一次在中正生活就上手。
+            從民雄/嘉義火車站怎麼到中正大學？校內可以騎電動車嗎？校外租屋一坪多少錢？<br>
+            本篇整理公車路線時刻、車管中心規範、民雄租屋區域價格比較表，讓你第一次在中正生活就上手。
           </p>
           <div class="hero-tags">
             <span class="tag">中正大學交通</span>
             <span class="tag">民雄火車站公車</span>
             <span class="tag">電動車校園</span>
-            <span class="tag">民雄租屋推薦</span>
+            <span class="tag">民雄租屋行情</span>
+            <span class="tag">車管中心</span>
           </div>
         </section>
 
-        <!-- 區塊1：公車建議 + 火車建議 -->
+        <!-- 區塊1：公車 + 火車建議 -->
         <section class="content-section" id="bus-train" aria-labelledby="bus-train-title">
-          <h2 id="bus-train-title">🚌 公車與火車建議｜往返中正大學最實用路線</h2>
-          <p>中正大學距離民雄火車站約6公里、嘉義火車站約12公里。以下整理新生最常用的公共交通方式：</p>
-
-          <div class="card-grid mt-3">
-            <article class="traffic-card">
-              <h3>🚍 公車路線（往嘉義市區／民雄）</h3>
-              <ul>
-                <li><strong>【7309】嘉義－中正大學</strong>：從嘉義火車站發車，經嘉義市區直達校內行政大樓，班次約每1~2小時一班，時刻表可下載「公車即時動態APP」查詢。</li>
-                <li><strong>【7306】梅山－民雄－嘉義</strong>：行經民雄火車站與中正大學大門口，適合轉乘台鐵。</li>
-                <li><strong>【台灣好行－故宮南院線】</strong>：週末與假日行駛，可串聯民雄、嘉義市區景點。</li>
-                <li><strong>校內公車優惠：</strong> 持學生證電子票證搭乘嘉義縣公車享半價優惠。</li>
-              </ul>
-            </article>
-            <article class="traffic-card">
-              <h3>🚆 火車建議（民雄車站 vs 嘉義車站）</h3>
-              <ul>
-                <li><strong>民雄火車站</strong>：距離學校最近，出站後可轉乘公車7306、計程車（約5-7分鐘車程，共乘約40-60元/人）或騎乘YouBike（約20分鐘）。適合從北部或南部搭乘區間車抵達的學生。</li>
-                <li><strong>嘉義火車站</strong>：停靠自強號、莒光號，轉乘公車7309直達中正大學最方便。站前亦有計程車共乘服務，約15-20分鐘抵達。</li>
-                <li><strong>高鐵嘉義站</strong>：可搭乘BRT至嘉義火車站，再轉乘7309公車；或直接搭計程車（約30分鐘車程，共乘約150-200元/人）。</li>
-              </ul>
-            </article>
-          </div>
+          <h2 id="bus-train-title">🚌 公車與火車建議｜往返中正大學最實用路線（時刻/票價）</h2>
+          <p>中正大學距離民雄火車站約6公里、嘉義火車站約12公里。以下為新生最常用的公共交通方式：</p>
+          <table class="table table-bordered">
+            <thead>
+              <tr><th>路線</th><th>起訖</th><th>班次間距</th><th>備註</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>【7309】</td><td>嘉義火車站 → 中正大學行政大樓</td><td>約1-2小時</td><td>直達校內最方便</td></tr>
+              <tr><td>【7306】</td><td>梅山－民雄－嘉義</td><td>約30-60分鐘</td><td>行經民雄火車站與中正大門口</td></tr>
+              <tr><td>台灣好行故宮南院線</td><td>週末/假日行駛</td><td>約1小時</td><td>可串聯民雄、嘉義市區景點</td></tr>
+            </tbody>
+          </table>
+          <p><strong>火車建議：</strong>民雄火車站離校最近，出站可轉乘公車7306、計程車（共乘約40-60元/人）或YouBike（約20分鐘）。高鐵嘉義站可搭BRT至嘉義火車站轉乘7309。</p>
           <div class="info-box mt-3">
-            <p>📱 <strong>實用APP推薦：</strong> 「iBus_公路客運」、「台鐵e訂通」、「嘉義市公車」可即時查詢到站時間，掌握班次不空等。</p>
+            <p>📱 <strong>實用APP推薦：</strong> 「iBus_公路客運」、「台鐵e訂通」、「嘉義市公車」可即時查詢到站時間。</p>
           </div>
         </section>
 
-        <!-- 區塊2：電動車使用建議 + 車管中心資訊 -->
+        <!-- 區塊2：電動車 + 車管中心 -->
         <section class="content-section" id="ev-scooter" aria-labelledby="ev-title">
           <h2 id="ev-title">⚡ 電動車與車管中心｜校園移動新選擇</h2>
-          <p>中正大學校園幅員廣闊，許多學生選擇機車代步，但近年電動機車與共享運具也成為熱門選項：</p>
-
           <div class="row align-items-start mb-4">
             <div class="col-md-6">
               <div class="ev-card">
                 <h3>🛵 電動車使用建議</h3>
                 <ul>
-                  <li><strong>校內充電站：</strong> 活動中心地下室、大學部宿舍停車場、管理學院旁停車場設有Gogoro／普通電動機車充電插座（部分需自備充電器）。</li>
-                  <li><strong>共享電動機車（GoShare / iRent）：</strong> 嘉義市區已有服務，但在民雄鄉覆蓋率較低，建議事先打開APP查看營運範圍。</li>
-                  <li><strong>購買電動車補助：</strong> 嘉義縣環保局提供新購電動機車補助，可洽詢車行或校務資訊。</li>
-                  <li><strong>建議：</strong> 若經常往返嘉義市區，油車或電車皆可，但務必遵守校園限速30公里及停車規定。</li>
+                  <li><strong>校內充電站：</strong> 活動中心地下室、大學部宿舍停車場、管理學院旁停車場設有充電插座。</li>
+                  <li><strong>共享電動機車（GoShare / iRent）：</strong> 嘉義市區已有服務，民雄鄉覆蓋率較低。</li>
+                  <li><strong>購買電動車補助：</strong> 嘉義縣環保局提供新購電動機車補助。</li>
                 </ul>
               </div>
             </div>
             <div class="col-md-6">
               <div class="traffic-card">
-                <h3>🏢 車輛管理中心（車管中心）重要資訊</h3>
+                <h3>🏢 車輛管理中心（車管中心）</h3>
                 <ul>
-                  <li><strong>機車停車證：</strong> 每學期開學後線上申請，費用約300-500元（依場地不同），可停放學生專用停車場（大學路停車場、宿舍區停車場）。</li>
-                  <li><strong>汽車停車證：</strong> 研究生及教職員優先，申請需憑行照並繳費。</li>
-                  <li><strong>違規取締：</strong> 校園內違規停車或超速會被記點，累積3點停權一個月，請依規定停放。</li>
-                  <li><strong>車管中心位置：</strong> 活動中心二樓，可辦理停車證、失車協尋及相關繳費。</li>
+                  <li><strong>機車停車證：</strong> 每學期約300-500元，線上申請。</li>
+                  <li><strong>汽車停車證：</strong> 研究生及教職員優先。</li>
+                  <li><strong>違規取締：</strong> 違規停車或超速會被記點，累積3點停權一個月。</li>
+                  <li><strong>車管中心位置：</strong> 活動中心二樓。</li>
                 </ul>
               </div>
             </div>
           </div>
           <div class="info-box">
-            <p>🔋 小提醒：民雄地區近期增設多處電動車快充站（如全聯民雄店、台鐵民雄站後站），長途移動也不怕沒電。詳細分布可參考「PlugShare」APP。</p>
+            <p>🔋 小提醒：民雄地區近期增設多處電動車快充站（如全聯民雄店、台鐵民雄站後站）。</p>
           </div>
         </section>
 
-        <!-- 區塊3：校外租屋建議 (區域、價格、注意事項) 符合真實不捏造 -->
+        <!-- 區塊3：租屋建議 -->
         <section class="content-section" id="rent-guide" aria-labelledby="rent-title">
-          <h2 id="rent-title">🏠 校外租屋攻略｜區域、行情與簽約注意事項</h2>
-          <p>中正大學約有三分之二學生選擇校外租屋，主要租屋區集中在學校周邊及民雄市區。以下整理客觀資訊，幫助新生避開地雷：</p>
+          <h2 id="rent-title">🏠 校外租屋攻略｜區域・行情・簽約注意事項（112-114學年度行情表）</h2>
+          <p>中正大學約有三分之二學生選擇校外租屋，主要租屋區集中在學校周邊及民雄市區。</p>
+          
+          <h3>📍 常見租屋區域與價格參考</h3>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr><th>租屋區域</th><th>房型</th><th>每月價格參考</th><th>特色</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>「大吃市」周邊（大學路一段）</td><td>獨立套房</td><td>4,500 - 6,500元</td><td>離校最近，步行5-10分鐘</td></tr>
+              <tr><td>民雄市區（近民雄火車站）</td><td>套房 / 雅房</td><td>3,500 - 5,000元</td><td>生活機能豐富，搭公車約10-15分鐘</td></tr>
+              <tr><td>豐收村、神農路一帶</td><td>獨立套房</td><td>5,000 - 7,000元</td><td>屋齡較新，不少房東提供機車位</td></tr>
+              <tr><td>嘉義市區邊陲</td><td>套房</td><td>6,000 - 9,000元</td><td>適合自有機車者，生活娛樂多元</td></tr>
+            </tbody>
+          </table>
+          <p class="text-muted small">※ 以上為民雄地區112-114學年度常見區間，實際以租屋市場為準。</p>
 
-          <div class="card-grid rent-grid">
-            <article class="rent-card">
-              <h3>📍 常見租屋區域</h3>
-              <ul>
-                <li><strong>「大吃市」周邊（大學路一段）</strong>：離校最近，步行5~10分鐘可到側門，生活機能方便，單人套房約4,500~6,500元/月。</li>
-                <li><strong>民雄市區（近民雄火車站）</strong>：生活機能豐富（全聯、麥當勞、市場），搭公車上學約10-15分鐘，租金較便宜，套房約3,500~5,000元/月。</li>
-                <li><strong>豐收村、神農路一帶</strong>：許多學生宿舍改建，屋齡較新，套房約5,000~7,000元，不少房東提供專屬機車位。</li>
-                <li><strong>嘉義市區邊陲</strong>：適合自有機車的學生，租金稍高但生活娛樂多元。</li>
-              </ul>
-            </article>
-            <article class="rent-card">
-              <h3>💰 價格參考（每月）</h3>
-              <ul>
-                <li>雅房：2,500~4,000元</li>
-                <li>獨立套房：4,000~7,000元（含水費、網路，電費另計）</li>
-                <li>整層公寓（2-3房）：12,000~20,000元／戶</li>
-                <li><em>※以上為民雄地區112-114學年度常見區間，實際以租屋市場為準。</em></li>
-              </ul>
-            </article>
-            <article class="rent-card">
-              <h3>⚠️ 簽約注意事項</h3>
-              <ul>
-                <li>務必親自看屋，確認房間通風、有無壁癌、水壓及馬桶狀況。</li>
-                <li>電費計價：一度電是否超過5元？夏季是否加成？合約寫清楚。</li>
-                <li>確認房東是否提供「基本家具（床、書桌、冷氣、熱水器）」，並拍照設備狀況。</li>
-                <li>租約到期前一個月要確認是否續約，避免押金糾紛。</li>
-                <li>建議使用「內政部住宅租賃契約書範本」，保障雙方權益。</li>
-              </ul>
-            </article>
-          </div>
+          <h3>⚠️ 簽約注意事項</h3>
+          <ul>
+            <li>務必親自看屋，確認通風、有無壁癌、水壓及馬桶狀況。</li>
+            <li>電費計價：一度電是否超過5元？夏季是否加成？合約寫清楚。</li>
+            <li>確認房東提供基本家具（床、書桌、冷氣、熱水器）。</li>
+            <li>建議使用「內政部住宅租賃契約書範本」。</li>
+          </ul>
           <div class="info-box mt-3">
-            <p>📌 租屋資訊來源：可參考校內「CCU租屋交流版」、591租屋網、中正大學雲端租屋平台。學校也提供「免費租屋法律諮詢」，請洽學務處生輔組。</p>
+            <p>📌 租屋資訊來源：校內「CCU租屋交流版」、591租屋網、中正大學雲端租屋平台。學校提供免費租屋法律諮詢（學務處生輔組）。</p>
           </div>
         </section>
 
-        <!-- 區塊4：周邊生活機能 (採購、醫療、銀行) -->
+        <!-- 區塊4：周邊生活機能 -->
         <section class="content-section" id="life-function" aria-labelledby="life-title">
           <h2 id="life-title">🛒 周邊生活機能｜吃、買、診所、郵局一次滿足</h2>
           <p>就算沒有機車，中正大學生活圈依然能滿足日常所需：</p>
@@ -270,27 +241,28 @@
             <div class="col-md-4 mb-3">
               <div class="function-card text-center p-3">
                 <h3>🍱 飲食採購</h3>
-                <p>校內有學生餐廳、便利商店 (7-11、全家)；「大吃市」有自助餐、麵館、手搖飲；民雄市區有全聯、寶雅、傳統市場。</p>
+                <p>校內有學生餐廳、便利商店；「大吃市」有自助餐、麵館；民雄市區有全聯、寶雅、傳統市場。</p>
               </div>
             </div>
             <div class="col-md-4 mb-3">
               <div class="function-card text-center p-3">
                 <h3>🏧 金融/郵局</h3>
-                <p>校內活動中心1F設有「中華郵政中正大學郵局」，可領錢寄件；土地銀行、玉山銀行ATM也在活動中心及圖書館。</p>
+                <p>校內活動中心1F設有「中華郵政中正大學郵局」；土地銀行、玉山銀行ATM也在活動中心及圖書館。</p>
               </div>
             </div>
             <div class="col-md-4 mb-3">
               <div class="function-card text-center p-3">
                 <h3>🩺 診所與藥局</h3>
-                <p>校內「學務處衛生保健組」提供基本醫療諮詢；民雄市區有耳鼻喉科、牙醫、小兒科診所，大病可至大林慈濟醫院（車程約15分鐘）。</p>
+                <p>校內「學務處衛生保健組」提供基本醫療諮詢；民雄市區有診所，大病可至大林慈濟醫院。</p>
               </div>
             </div>
           </div>
-          <p>另外，學校側門「大學路一段」也有機車行、美髮店、影印店及眼鏡行，日常大小事幾乎都可在此解決。</p>
+          
+          <!-- 內部連結 -->
           <div class="internal-links mt-4 p-3 bg-light rounded">
             <p><strong>📖 延伸閱讀：</strong></p>
             <ul>
-              <li><a href="/ccu/campus-life.html">中正大學校園生活指南 (圖書館/影印/寧靜湖)</a></li>
+              <li><a href="/ccu/ccu-campus-life.html">中正大學校園生活指南 (圖書館/影印/寧靜湖)</a></li>
               <li><a href="/food.html">中正大學附近美食與民雄必吃推薦</a></li>
               <li><a href="/chiayi.html">嘉義市區景點與一日行程建議</a></li>
             </ul>
@@ -303,27 +275,33 @@
   <!-- 回到頂部按鈕 -->
   <button class="back-to-top" aria-label="回到頂端">↑</button>
 
-  <!-- 全站頁尾 -->
+  <!-- Footer - 與首頁完全相同 -->
   <footer class="site-footer" aria-label="頁尾">
     <div class="footer-inner">
-      <p class="footer-desc">CCU Chiayi Guide 是一個以 SEO/SEM 課程為核心的靜態網站，整理中正大學新生與嘉義旅客需要的實用在地資訊。</p>
+      <p class="footer-desc">
+        CCU Chiayi Guide 是一個以 SEO/SEM 課程為核心的靜態網站，
+        整理中正大學新生與嘉義旅客需要的實用在地資訊。
+      </p>
       <nav class="footer-nav" aria-label="頁尾導覽">
         <ul>
           <li><a href="/">首頁</a></li>
-          <li><a href="/food.html">美食指南</a></li>
-          <li><a href="/traffic.html">交通指南</a></li>
-          <li><a href="/chiayi.html">嘉義指南</a></li>
-          <li><a href="/ccu/transport.html">交通·租屋</a></li>
+          <li><a href="/chiayi/index.html">嘉義總覽</a></li>
+          <li><a href="/minxiong/index.html">民雄總覽</a></li>
+          <li><a href="/ccu/index.html">中正大學總覽</a></li>
         </ul>
       </nav>
-      <p class="footer-copyright">© 2026 CCU Chiayi Guide. 本站內容以真實在地資訊為準，不捏造店家資料。</p>
+      <p class="footer-copyright">
+        © 2026 CCU Chiayi Guide.
+        本站內容以真實在地資訊為準，不捏造店家資料。
+      </p>
     </div>
   </footer>
 </div>
+<!-- /.site-wrapper -->
 
 <!-- 全站共用 JS -->
 <script src="/js/main.js" defer></script>
-<!-- 頁面專用 JS (transport.js) -->
+<!-- 頁面專用 JS -->
 <script src="/js/pages/transport.js" defer></script>
 </body>
 </html>
