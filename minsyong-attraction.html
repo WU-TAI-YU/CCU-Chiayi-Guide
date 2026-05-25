@@ -57,6 +57,12 @@
          ・僅放本頁獨有樣式，共用元件樣式請加入 components.css
     ===================================================== -->
     <link rel="stylesheet" href="/css/pages/PAGE.css" />
+    <style>
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        filter: invert(1);
+      }
+    </style>
 
     <!-- =====================================================
          【組員必改 3/3】JSON-LD Structured Data
@@ -484,7 +490,116 @@
 
             <section class="content-section" id="section-4">
               <h2>KHTOY絨毛玩偶旗艦館</h2>
-              <p>段落內容...</p>
+              <p>
+                KHTOY絨毛玩偶旗艦館是民雄近年相當受到歡迎的室內觀光景點之一，
+                以大型絨毛玩偶展示、拍照空間、DIY與玩具商品為特色，
+                吸引許多親子、學生與喜歡玩偶文化的遊客前來參觀。
+              </p>
+
+              <p>
+                館內展示了各式各樣的絨毛玩偶與角色商品，均是有授權的正版產品，
+                並配合網路平台帶給顧客安心、快速、方便且平價的購物體驗。
+                空間設計也加入了許多色彩鮮明的拍照區域，
+                整體氛圍輕鬆可愛，適合喜歡拍照或收藏玩偶的旅客。
+                部分區域也會依照活動或季節進行主題佈置，
+                增加參觀時的趣味性與互動感。
+              </p>
+
+              <div id="spotCarousel" class="carousel slide my-4">
+                <div class="carousel-inner rounded shadow-sm">
+
+                  <div class="carousel-item active">
+                    <img
+                      src="/images/minsyong_attraction/khtoy_pingu.jpg"
+                      class="d-block w-50 mx-auto"                     
+                      alt="KHTOY展示巨大Pingu"
+                    />
+                    <p class="image-source small text-muted mt-2 text-center">
+                      活動展示巨大Pingu
+                    </p>
+                  </div>
+
+                  <div class="carousel-item">
+                    <img
+                      src="/images/minsyong_attraction/khtoy_bear.jpg"
+                      class="d-block w-50 mx-auto"
+                      alt="KHTOY門口的熊熊雕像"
+                    />
+                    <p class="image-source small text-muted mt-2 text-center">
+                      門口的熊熊雕像
+                    </p>
+                  </div>
+
+                  <div class="carousel-item">
+                    <img
+                      src="/images/minsyong_attraction/khtoy_sanrio.jpg"
+                      class="d-block w-50 mx-auto"
+                      alt="KHTOY的三麗鷗展區"
+                    />
+                    <p class="image-source small text-muted mt-2 text-center">
+                      三麗鷗展區
+                    </p>
+                  </div>
+
+                  <div class="carousel-item">
+                    <img
+                      src="/images/minsyong_attraction/khtoy_chainsowman.jpg"
+                      class="d-block w-50 mx-auto"
+                      alt="KHTOY的鏈鋸人商品"
+                    />
+                    <p class="image-source small text-muted mt-2 text-center">
+                      鏈鋸人商品
+                    </p>
+                  </div>
+
+                  <div class="carousel-item">
+                    <img
+                      src="/images/minsyong_attraction/khtoy_mofusand.jpg"
+                      class="d-block w-50 mx-auto"
+                      alt="KHTOY的貓福珊迪合照區"
+                    />
+                    <p class="image-source small text-muted mt-2 text-center">
+                      貓福珊迪合照區
+                    </p>
+                  </div>
+
+                  <div class="carousel-item">
+                    <img
+                      src="/images/minsyong_attraction/khtoy_stitch.jpg"
+                      class="d-block w-50 mx-auto"
+                      alt="KHTOY的史迪奇合照區"
+                    />
+                    <p class="image-source small text-muted mt-2 text-center">
+                      史迪奇合照區
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 左箭頭 -->
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#spotCarousel"
+                  data-bs-slide="prev"
+                >
+                  <span class="carousel-control-prev-icon"></span>
+                </button>
+
+                <!-- 右箭頭 -->
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#spotCarousel"
+                  data-bs-slide="next"
+                >
+                  <span class="carousel-control-next-icon"></span>
+                </button>
+
+                <p class="image-source small text-muted mt-2 text-center">
+                      圖片來源：組員實地拍攝
+                </p>
+              </div>
+
               <div class="map-container my-4">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.3659592571826!2d120.43037211091305!3d23.519336497519458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e97d4e6bb2ca9%3A0x8bdf2075e6eed12a!2zS0hUT1nntajmr5vnjqnlgbbml5foiabppKg!5e0!3m2!1szh-TW!2stw!4v1779655283923!5m2!1szh-TW!2stw" 
                 width="75%" 
@@ -503,7 +618,30 @@
 
             <section class="content-section" id="section-5">
               <h2>嘉義酒類文物館</h2>
-              <p>段落內容...</p>
+              <p>
+                嘉義酒類文物館是結合酒文化、歷史展示與觀光導覽的特色景點，
+                館內收藏了與台灣酒類產業相關的歷史資料、器具與文物，
+                讓遊客能夠認識台灣早期酒類製造與發展歷程。
+              </p>
+
+              <p>
+                除了文物展示外，館內空間也保留部分復古風格與產業元素，適合拍照與慢慢參觀。
+                由於屬於室內景點，即使遇到下雨或炎熱天氣，
+                也相當適合作為旅遊行程安排的一部分。
+                館中也能體驗品酒，以及品嘗充滿特色的酒香冰淇淋，精美的伴手禮更是不可錯過。
+              </p>
+
+              <div class="content-image my-4">
+                <img
+                  src="/images/minsyong_attraction/chiayi_distillery.jpg"
+                  alt="嘉義酒類文物館"
+                  class="img-fluid rounded shadow-sm w-50 mx-auto d-block"
+                />
+                <p class="image-source small text-muted mt-2 text-center">
+                  圖片來源：嘉義縣文化觀光局官網
+                </p>
+              </div>
+
               <div class="map-container my-4">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14633.260242827411!2d120.43360971303817!3d23.521168062646407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e95fa8da4fb61%3A0x444d971d03292f5!2z5ZiJ576p6YWS6aGe5paH54mp6aSo!5e0!3m2!1szh-TW!2stw!4v1779655531051!5m2!1szh-TW!2stw" 
                 width="75%" 
@@ -560,6 +698,9 @@
 
     <!-- 全站共用 JS（手機導覽、回到頂部、平滑捲動）-->
     <script src="/js/main.js" defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
 
     <!-- 頁面專用 JS（若本頁有互動功能再取消註解，檔名依頁名命名）-->
     <!-- <script src="/js/pages/PAGE.js" defer></script> -->
