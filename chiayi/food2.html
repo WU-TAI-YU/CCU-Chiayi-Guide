@@ -18,14 +18,20 @@
       gtag("config", "G-EX4HL59KV2");
     </script>
 
-    <title>嘉義旅遊與美食指南｜CCU Chiayi Guide</title>
+    <!-- =====================================================
+         【組員必改 1/3】SEO Metadata
+         ・title：建議 30–60 字元，格式：核心關鍵字｜CCU Chiayi Guide
+         ・description：建議 80–160 字元，自然描述頁面內容
+         ・canonical：換成此頁實際 URL
+    ===================================================== -->
+    <title>嘉義在地美食指南｜CCU Chiayi Guide</title>
     <meta
       name="description"
-      content="整理嘉義在地美食與景點資訊，包含嘉義火雞肉飯、檜意森活村等，幫助旅客與中正大學學生快速規劃嘉義行程。"
+      content="整理嘉義火雞肉飯、文化路夜市、在地小吃等美食資訊，幫助中正大學學生與旅客快速找到嘉義美食推薦。"
     />
     <link
       rel="canonical"
-      href="https://www.ccu-chiayi-guide.site/chiayi/index.html"
+      href="https://www.ccu-chiayi-guide.site/chiayi/food.html"
     />
 
     <!-- Favicon -->
@@ -43,17 +49,27 @@
     <link rel="stylesheet" href="../css/base.css" />
     <link rel="stylesheet" href="../css/layout.css" />
     <link rel="stylesheet" href="../css/components.css" />
-    <!-- 借用 chiayi-food.css 的卡片覆寫樣式（.food-lobby-grid .card padding: 0）-->
+
+    <!-- =====================================================
+         【組員必改 2/3】頁面專用 CSS
+         ・僅放本頁獨有樣式，共用元件樣式請加入 components.css
+    ===================================================== -->
     <link rel="stylesheet" href="../css/pages/chiayi-food.css" />
 
+    <!-- =====================================================
+         【組員必改 3/3】JSON-LD Structured Data
+         ・WebPage：更新 name、description、url
+         ・BreadcrumbList：二層（首頁 / 本頁）
+         ・Schema 內容必須與頁面可見文字一致，不得捏造
+    ===================================================== -->
     <script type="application/ld+json">
       [
         {
           "@context": "https://schema.org",
           "@type": "WebPage",
-          "name": "嘉義旅遊與美食指南｜CCU Chiayi Guide",
-          "description": "整理嘉義在地美食與景點資訊，包含嘉義火雞肉飯、檜意森活村等，幫助旅客與中正大學學生快速規劃嘉義行程。",
-          "url": "https://www.ccu-chiayi-guide.site/chiayi/index.html",
+          "name": "嘉義在地美食指南｜CCU Chiayi Guide",
+          "description": "整理嘉義火雞肉飯、文化路夜市、在地小吃等美食資訊，幫助中正大學學生與旅客快速找到嘉義美食推薦。",
+          "url": "https://www.ccu-chiayi-guide.site/chiayi/food.html",
           "inLanguage": "zh-TW",
           "isPartOf": {
             "@type": "WebSite",
@@ -75,6 +91,12 @@
               "position": 2,
               "name": "嘉義",
               "item": "https://www.ccu-chiayi-guide.site/chiayi/index.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "嘉義美食大廳",
+              "item": "https://www.ccu-chiayi-guide.site/chiayi/food.html"
             }
           ]
         }
@@ -119,6 +141,10 @@
           </div>
         </header>
 
+        <!-- 主要導覽
+             【組員提醒】將本頁對應的子選單 <a> 加上 aria-current="page"
+             例如：<a href="food.html" aria-current="page">嘉義美食</a>
+        -->
         <nav class="site-nav" id="site-nav" aria-label="主要導覽">
           <ul>
             <li><a href="../index.html">首頁</a></li>
@@ -127,8 +153,8 @@
                 嘉義 <span class="nav-arrow" aria-hidden="true">▾</span>
               </button>
               <ul class="nav-submenu" aria-label="嘉義子選單">
-                <li><a href="index.html" aria-current="page">嘉義總覽</a></li>
-                <li><a href="food.html">嘉義美食</a></li>
+                <li><a href="index.html">嘉義總覽</a></li>
+                <li><a href="food.html" aria-current="page">嘉義美食</a></li>
                 <li><a href="attraction.html">嘉義景點</a></li>
               </ul>
             </li>
@@ -147,94 +173,113 @@
                 中正大學 <span class="nav-arrow" aria-hidden="true">▾</span>
               </button>
               <ul class="nav-submenu" aria-label="中正大學子選單">
-                <li><a href="/ccu/index.html">中正大學總覽</a></li>
-                <li><a href="/ccu/ccu-campus-life.html">新生懶人包</a></li>
-                <li><a href="/ccu/ccu-transport.html">交通資訊</a></li>
-                <li><a href="/ccu-housing.html">租屋事項</a></li>
+                <li><a href="../ccu/index.html">中正大學總覽</a></li>
+                <li><a href="#">新生懶人包</a></li>
+                <li><a href="../traffic.html">交通資訊</a></li>
+                <li><a href="#">租屋事項</a></li>
               </ul>
             </li>
           </ul>
         </nav>
       </div>
-      <!-- /.sticky-header-wrap -->
+      <!-- /.sticky-header-wrap（固定區塊結束） -->
 
-      <!-- 麵包屑導覽（二層：首頁 / 嘉義）-->
+      <!-- =====================================================
+           麵包屑導覽（二層：首頁 / 嘉義美食大廳）
+      ===================================================== -->
       <nav aria-label="麵包屑導覽" class="breadcrumb-nav container py-2">
         <ol class="breadcrumb mb-0">
           <li class="breadcrumb-item"><a href="../index.html">首頁</a></li>
-          <li class="breadcrumb-item active" aria-current="page">嘉義</li>
+          <li class="breadcrumb-item"><a href="index.html">嘉義</a></li>
+          <li class="breadcrumb-item active" aria-current="page">
+            嘉義美食大廳
+          </li>
         </ol>
       </nav>
+      <!-- /麵包屑導覽 -->
 
+      <!-- =====================================================
+           主內容區塊（大廳分流頁，全版寬單欄，不設 TOC 側欄）
+      ===================================================== -->
       <main class="site-main container py-0" id="main-content">
         <!-- Page intro -->
         <section class="chiayi-food-intro" aria-labelledby="page-title">
-          <h1 id="page-title">嘉義旅遊與美食指南</h1>
+          <h1 id="page-title">嘉義在地美食指南</h1>
           <p class="intro-lead">
-            嘉義是台灣西南部充滿在地特色的城市，以阿里山、火雞肉飯與日式建築文化著名。<br />
-            從在地美食探索到景點行程規劃，這裡整理了嘉義各主題的實用資訊，
-            幫助中正大學學生與初次到訪嘉義的旅客快速上手。
+            嘉義以雞肉飯、文化路夜市與各式在地小吃聞名全台。<br />
+            無論是中正大學學生課後覓食，還是初次造訪嘉義的旅客，
+            這裡匯集嘉義各類美食主題文章，幫你快速找到想吃的。
           </p>
         </section>
 
-        <!-- 主題分區 -->
-        <section aria-labelledby="topics-title">
-          <h2 id="topics-title">嘉義主題專區</h2>
+        <!-- Article grid -->
+        <section aria-labelledby="articles-title">
+          <h2 id="articles-title">美食文章</h2>
 
           <div class="row g-4 food-lobby-grid">
-            <!-- ===== 主題卡片開始 ===== -->
-            <div class="col-12 col-md-6">
+            <!-- ===== 文章卡片開始 ===== -->
+            <div class="col-12 col-md-4">
               <article class="card h-100">
                 <img
-                  src="../images/chiayi-food/gongyuan.jpg"
-                  alt="嘉義火雞肉飯"
+                  src="../images/chiayi-turkey-rice-cover.webp"
+                  alt="嘉義火雞肉飯：白飯上鋪著切片火雞肉，淋上雞油醬汁"
                   class="card-img-top"
                   style="height: 200px; object-fit: cover"
                   loading="lazy"
                 />
                 <div class="card-body d-flex flex-column">
-                  <h5 class="card-title">嘉義美食大廳</h5>
+                  <h5 class="card-title">嘉義雞肉飯推薦</h5>
                   <p class="card-text">
-                    嘉義火雞肉飯及在地小吃精選。
-                    各式嘉義美食推薦，幫你找到最想吃的那一碗。
+                    嘉義最具代表性的在地料理，以切片火雞肉覆蓋白飯、淋上雞油醬汁。
+                    從早餐到午餐，嘉義市區四處都有店家供應，是來嘉義必嚐的一碗飯。
                   </p>
-                  <a href="food.html" class="btn btn-success mt-auto"
-                    >探索嘉義美食</a
+                  <a
+                    href="./chiayi-turkey-rice.html"
+                    class="btn btn-success mt-auto"
+                    >閱讀全文</a
                   >
                 </div>
               </article>
             </div>
-            <!-- ===== 主題卡片結束 ===== -->
+            <!-- ===== 文章卡片結束 ===== -->
 
-            <!-- ===== 主題卡片開始 ===== -->
-            <div class="col-12 col-md-6">
+            <!-- ===== 文章卡片開始 ===== -->
+            <div class="col-12 col-md-4">
               <article class="card h-100">
                 <img
-                  src="../images/chiayi-city-spots-cover.webp"
-                  alt="嘉義檜意森活村日式木造建築"
+                  src="../images/chiayi-night-market-cover.webp"
+                  alt="嘉義文化路夜市夜間燈光攤位"
                   class="card-img-top"
                   style="height: 200px; object-fit: cover"
                   loading="lazy"
                 />
                 <div class="card-body d-flex flex-column">
-                  <h5 class="card-title">嘉義景點大廳</h5>
+                  <h5 class="card-title">嘉義文化路夜市吃什麼</h5>
                   <p class="card-text">
-                    檜意森活村、嘉義公園、阿里山、民雄周邊景點⋯⋯
-                    從市區半日散步到一日山岳旅行，行程規劃一次找齊。
+                    嘉義市區最熱鬧的夜市，芋頭大福、涼麵、海產攤一應俱全。
+                    週末人潮最盛，建議傍晚提早前往，慢慢探索適合自己口味的攤位。
                   </p>
-                  <a href="attraction.html" class="btn btn-success mt-auto"
-                    >探索嘉義景點</a
+                  <a
+                    href="../articles/chiayi-night-market.html"
+                    class="btn btn-success mt-auto"
+                    >閱讀全文</a
                   >
                 </div>
               </article>
             </div>
-            <!-- ===== 主題卡片結束 ===== -->
+            <!-- ===== 文章卡片結束 ===== -->
           </div>
+          <!-- /.row food-lobby-grid -->
         </section>
       </main>
+      <!-- /主內容區塊 -->
 
+      <!-- 回到頂部按鈕（由 js/main.js 的 initBackToTop() 控制顯示） -->
       <button class="back-to-top" aria-label="回到頂端">&#8679;</button>
 
+      <!-- =====================================================
+           全站頁尾（各頁保持一致，請勿修改此區塊）
+      ===================================================== -->
       <footer class="site-footer" aria-label="頁尾">
         <div class="footer-inner">
           <p class="footer-desc">
@@ -244,9 +289,9 @@
           <nav class="footer-nav" aria-label="頁尾導覽">
             <ul>
               <li><a href="../index.html">首頁</a></li>
-              <li><a href="/chiayi/index.html">嘉義總覽</a></li>
-              <li><a href="../minxiong/index.html">民雄總覽</a></li>
-              <li><a href="../ccu/index.html">中正大學總覽</a></li>
+              <li><a href="attraction.html">嘉義景點</a></li>
+              <li><a href="../minsyong-attraction.html">民雄指南</a></li>
+              <li><a href="#">中正大學</a></li>
             </ul>
           </nav>
           <p class="footer-copyright">
@@ -255,8 +300,11 @@
           </p>
         </div>
       </footer>
+      <!-- /頁尾 -->
     </div>
+    <!-- /.site-wrapper -->
 
+    <!-- 全站共用 JS（手機導覽、回到頂部、平滑捲動）-->
     <script src="../js/main.js" defer></script>
   </body>
 </html>
