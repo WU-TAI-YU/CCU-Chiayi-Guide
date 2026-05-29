@@ -1,0 +1,119 @@
+/* ccu-food.css: 中正大學美食網頁專用樣式 */
+
+.food-carousel {
+  height: 100%;
+  min-height: 250px;
+}
+
+.food-carousel .carousel-inner {
+  height: 100%;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  overflow: hidden;
+}
+
+.food-carousel .carousel-item {
+  height: 100%;
+}
+
+.food-carousel .carousel-item img {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* 懸停時卡片圖片微放大的動態效果 */
+.card:hover .food-carousel .carousel-item img {
+  transform: scale(1.03);
+}
+
+/* 行動版面（直向堆疊）時的圓角調整 */
+@media (max-width: 767.98px) {
+  .food-carousel {
+    height: 260px;
+    min-height: auto;
+  }
+  
+  .food-carousel .carousel-inner,
+  .food-carousel .carousel-item img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+/* 輪播指示點（Dots）樣式優化 */
+.food-carousel .carousel-indicators [data-bs-target] {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  margin: 0 4px;
+}
+
+.food-carousel .carousel-indicators .active {
+  width: 18px;
+  border-radius: 4px;
+  background-color: #198754; /* 綠色主題色 */
+}
+
+/* 左右切換按鈕懸浮顯示效果 */
+.food-carousel .carousel-control-prev,
+.food-carousel .carousel-control-next {
+  width: 12%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.food-carousel:hover .carousel-control-prev,
+.food-carousel:hover .carousel-control-next {
+  opacity: 0.8;
+}
+
+.food-carousel .carousel-control-prev:hover,
+.food-carousel .carousel-control-next:hover {
+  opacity: 1;
+}
+
+/* 左右按鈕圖示的背景底色圈圈 */
+.food-carousel .carousel-control-prev-icon,
+.food-carousel .carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.55);
+  border-radius: 50%;
+  padding: 14px;
+  background-size: 55% 55%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Google Map 樣式 */
+.food-map-container {
+  height: 100%;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.food-map-container iframe {
+  width: 100%;
+  height: 100%;
+  flex-grow: 1;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+@media (max-width: 767.98px) {
+  .food-map-container {
+    height: 220px;
+    min-height: auto;
+    margin-top: 10px;
+    padding: 0 15px 15px 15px;
+  }
+  
+  .food-map-container iframe {
+    border-radius: 8px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+  }
+}
