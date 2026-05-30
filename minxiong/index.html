@@ -1,52 +1,41 @@
 <!doctype html>
 <html lang="zh-TW">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-EX4HL59KV2"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-EX4HL59KV2");
-    </script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>民雄生活與景點指南｜CCU Chiayi Guide</title>
-    <meta
-      name="description"
-      content="整理民雄鄉美食、景點與生活資訊，幫助中正大學學生快速認識校園周邊的民雄在地環境。"
-    />
-    <link
-      rel="canonical"
-      href="https://www.ccu-chiayi-guide.site/minxiong/index.html"
-    />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EX4HL59KV2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "G-EX4HL59KV2");
+  </script>
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="../images/ccu-school-emblem.png" />
-    <link rel="apple-touch-icon" href="../images/ccu-school-emblem.png" />
+  <title>民雄生活與景點指南｜CCU Chiayi Guide</title>
+  <meta name="description" content="整理民雄鄉美食、景點與生活資訊，幫助中正大學學生快速認識校園周邊的民雄在地環境。" />
+  <link rel="canonical" href="https://www.ccu-chiayi-guide.site/minxiong/index.html" />
 
-    <!-- Bootstrap 5 CSS（僅 CSS，不載入 Bootstrap JS） -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      crossorigin="anonymous"
-    />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../images/ccu-school-emblem.png" />
+  <link rel="apple-touch-icon" href="../images/ccu-school-emblem.png" />
 
-    <!-- 全站 CSS（載入順序不可更動） -->
-    <link rel="stylesheet" href="../css/base.css" />
-    <link rel="stylesheet" href="../css/layout.css" />
-    <link rel="stylesheet" href="../css/components.css" />
-    <!-- 借用 chiayi-food.css 的卡片覆寫樣式（.food-lobby-grid .card padding: 0）-->
-    <link rel="stylesheet" href="../css/pages/chiayi-food.css" />
+  <!-- Bootstrap 5 CSS（僅 CSS，不載入 Bootstrap JS） -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    crossorigin="anonymous" />
 
-    <script type="application/ld+json">
+  <!-- 全站 CSS（載入順序不可更動） -->
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/layout.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <!-- 借用 chiayi-food.css 的卡片覆寫樣式（.food-lobby-grid .card padding: 0）-->
+  <link rel="stylesheet" href="../css/pages/chiayi-food.css" />
+
+  <script type="application/ld+json">
       [
         {
           "@context": "https://schema.org",
@@ -80,185 +69,155 @@
         }
       ]
     </script>
-  </head>
+</head>
 
-  <body>
-    <div class="site-wrapper">
-      <!-- 固定導覽列（Sticky Header）-->
-      <div class="sticky-header-wrap sticky-top">
-        <header class="site-header" role="banner">
-          <div class="header-inner">
-            <a
-              href="../index.html"
-              class="site-logo"
-              aria-label="CCU Chiayi Guide 首頁"
-            >
-              <img
-                src="../images/ccu-chiayi-logo.png"
-                alt="CCU Chiayi Guide 網站標誌"
-                class="logo-emblem"
-                width="36"
-                height="36"
-              />
-              <span class="logo-text">
-                CCU Chiayi Guide
-                <span class="logo-sub">中正大學新生與嘉義生活指南</span>
-              </span>
-            </a>
+<body>
+  <div class="site-wrapper">
+    <!-- 固定導覽列（Sticky Header）-->
+    <div class="sticky-header-wrap sticky-top">
+      <header class="site-header" role="banner">
+        <div class="header-inner">
+          <a href="../index.html" class="site-logo" aria-label="CCU Chiayi Guide 首頁">
+            <img src="../images/ccu-chiayi-logo.png" alt="CCU Chiayi Guide 網站標誌" class="logo-emblem" width="36"
+              height="36" />
+            <span class="logo-text">
+              CCU Chiayi Guide
+              <span class="logo-sub">中正大學新生與嘉義生活指南</span>
+            </span>
+          </a>
 
-            <button
-              class="nav-toggle"
-              aria-label="開啟導覽選單"
-              aria-expanded="false"
-              aria-controls="site-nav"
-            >
-              <span></span>
-              <span></span>
-              <span></span>
+          <button class="nav-toggle" aria-label="開啟導覽選單" aria-expanded="false" aria-controls="site-nav">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </header>
+
+      <nav class="site-nav" id="site-nav" aria-label="主要導覽">
+        <ul>
+          <li><a href="../index.html">首頁</a></li>
+          <li class="has-submenu">
+            <button type="button">
+              嘉義 <span class="nav-arrow" aria-hidden="true">▾</span>
             </button>
-          </div>
-        </header>
+            <ul class="nav-submenu" aria-label="嘉義子選單">
+              <li><a href="../chiayi/index.html">嘉義總覽</a></li>
+              <li><a href="../chiayi/food.html">嘉義美食</a></li>
+              <li><a href="../chiayi/attraction.html">嘉義景點</a></li>
+            </ul>
+          </li>
+          <li class="has-submenu">
+            <button type="button" aria-current="true">
+              民雄 <span class="nav-arrow" aria-hidden="true">▾</span>
+            </button>
+            <ul class="nav-submenu" aria-label="民雄子選單">
+              <li><a href="index.html" aria-current="page">民雄總覽</a></li>
+              <li><a href="/minxiong/food.html">民雄美食</a></li>
+              <li><a href="../minsyong-attraction.html">民雄景點</a></li>
+            </ul>
+          </li>
+          <li class="has-submenu">
+            <button type="button">
+              中正大學 <span class="nav-arrow" aria-hidden="true">▾</span>
+            </button>
+            <ul class="nav-submenu" aria-label="中正大學子選單">
+              <li><a href="../ccu/index.html">中正大學總覽</a></li>
+              <li><a href="/ccu/ccu-campus-life.html">新生懶人包</a></li>
+              <li><a href="/ccu/ccu-transport.html">交通資訊</a></li>
+              <li><a href="/ccu/ccu-food.html">中正大學美食</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- /.sticky-header-wrap -->
 
-        <nav class="site-nav" id="site-nav" aria-label="主要導覽">
+    <!-- 麵包屑導覽（二層：首頁 / 民雄）-->
+    <nav aria-label="麵包屑導覽" class="breadcrumb-nav container py-2">
+      <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="../index.html">首頁</a></li>
+        <li class="breadcrumb-item active" aria-current="page">民雄</li>
+      </ol>
+    </nav>
+
+    <main class="site-main container py-0" id="main-content">
+      <!-- Page intro -->
+      <section class="chiayi-food-intro" aria-labelledby="page-title">
+        <h1 id="page-title">民雄生活與景點指南</h1>
+        <p class="intro-lead">
+          民雄鄉是中正大學的所在地，保有豐富的農村景色、在地小吃與獨特人文故事。<br />
+          從校園周邊的日常覓食，到假日探索在地農村酒莊，
+          這裡匯集民雄美食與景點資訊，幫助學生與旅客快速認識民雄。
+        </p>
+      </section>
+
+      <!-- 主題分區 -->
+      <section aria-labelledby="topics-title">
+        <h2 id="topics-title">民雄主題專區</h2>
+
+        <div class="row g-4 food-lobby-grid">
+          <!-- ===== 主題卡片開始 ===== -->
+          <div class="col-12 col-md-6">
+            <article class="card h-100">
+              <img src="../images/minsyong-food/花亭壽司/IMG20260523132718.jpg" alt="民雄在地小吃與校園周邊美食" class="card-img-top"
+                style="height: 200px; object-fit: cover" loading="lazy" />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">民雄美食大廳</h5>
+                <p class="card-text">
+                  民雄火車站附近熱門日式料理、甜點、鵝肉、在地老店、平價與熱門餐廳美食地圖全攻略
+                </p>
+                <a href="food.html" class="btn btn-success mt-auto">探索民雄美食</a>
+              </div>
+            </article>
+          </div>
+          <!-- ===== 主題卡片結束 ===== -->
+
+          <!-- ===== 主題卡片開始 ===== -->
+          <div class="col-12 col-md-6">
+            <article class="card h-100">
+              <img src="../images/minsyong_attraction/minsyong_attraction_map.jpg" alt="民雄景點地圖" class="card-img-top"
+                style="height: 200px; object-fit: cover" loading="lazy" />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">民雄景點大廳</h5>
+                <p class="card-text">
+                  旺萊山、觀光工廠、酒類文物館⋯⋯
+                  不出鄉就有地方可逛，民雄一日旅行景點推薦。
+                </p>
+                <a href="../minsyong-attraction.html" class="btn btn-success mt-auto">探索民雄景點</a>
+              </div>
+            </article>
+          </div>
+          <!-- ===== 主題卡片結束 ===== -->
+        </div>
+      </section>
+    </main>
+
+    <button class="back-to-top" aria-label="回到頂端">&#8679;</button>
+
+    <footer class="site-footer" aria-label="頁尾">
+      <div class="footer-inner">
+        <p class="footer-desc">
+          CCU Chiayi Guide 是一個以 SEO/SEM 課程為核心的靜態網站，
+          整理中正大學新生與嘉義旅客需要的實用在地資訊。
+        </p>
+        <nav class="footer-nav" aria-label="頁尾導覽">
           <ul>
             <li><a href="../index.html">首頁</a></li>
-            <li class="has-submenu">
-              <button type="button">
-                嘉義 <span class="nav-arrow" aria-hidden="true">▾</span>
-              </button>
-              <ul class="nav-submenu" aria-label="嘉義子選單">
-                <li><a href="../chiayi/index.html">嘉義總覽</a></li>
-                <li><a href="../chiayi/food.html">嘉義美食</a></li>
-                <li><a href="../chiayi/attraction.html">嘉義景點</a></li>
-              </ul>
-            </li>
-            <li class="has-submenu">
-              <button type="button" aria-current="true">
-                民雄 <span class="nav-arrow" aria-hidden="true">▾</span>
-              </button>
-              <ul class="nav-submenu" aria-label="民雄子選單">
-                <li><a href="index.html" aria-current="page">民雄總覽</a></li>
-                <li><a href="/minxiong/food.html">民雄美食</a></li>
-                <li><a href="../minsyong-attraction.html">民雄景點</a></li>
-              </ul>
-            </li>
-            <li class="has-submenu">
-              <button type="button">
-                中正大學 <span class="nav-arrow" aria-hidden="true">▾</span>
-              </button>
-              <ul class="nav-submenu" aria-label="中正大學子選單">
-                <li><a href="../ccu/index.html">中正大學總覽</a></li>
-                <li><a href="/ccu/ccu-campus-life.html">新生懶人包</a></li>
-                <li><a href="/ccu/ccu-transport.html">交通資訊</a></li>
-                <li><a href="/ccu/ccu-food.html">中正大學美食</a></li>
-              </ul>
-            </li>
+            <li><a href="../chiayi/index.html">嘉義總覽</a></li>
+            <li><a href="/minxiong/index.html">民雄總覽</a></li>
+            <li><a href="../ccu/index.html">中正大學總覽</a></li>
           </ul>
         </nav>
+        <p class="footer-copyright">
+          © 2026 CCU Chiayi Guide.
+          本站內容以真實在地資訊為準，不捏造店家資料。
+        </p>
       </div>
-      <!-- /.sticky-header-wrap -->
+    </footer>
+  </div>
 
-      <!-- 麵包屑導覽（二層：首頁 / 民雄）-->
-      <nav aria-label="麵包屑導覽" class="breadcrumb-nav container py-2">
-        <ol class="breadcrumb mb-0">
-          <li class="breadcrumb-item"><a href="../index.html">首頁</a></li>
-          <li class="breadcrumb-item active" aria-current="page">民雄</li>
-        </ol>
-      </nav>
+  <script src="../js/main.js" defer></script>
+</body>
 
-      <main class="site-main container py-0" id="main-content">
-        <!-- Page intro -->
-        <section class="chiayi-food-intro" aria-labelledby="page-title">
-          <h1 id="page-title">民雄生活與景點指南</h1>
-          <p class="intro-lead">
-            民雄鄉是中正大學的所在地，保有豐富的農村景色、在地小吃與獨特人文故事。<br />
-            從校園周邊的日常覓食，到假日探索在地農村酒莊，
-            這裡匯集民雄美食與景點資訊，幫助學生與旅客快速認識民雄。
-          </p>
-        </section>
-
-        <!-- 主題分區 -->
-        <section aria-labelledby="topics-title">
-          <h2 id="topics-title">民雄主題專區</h2>
-
-          <div class="row g-4 food-lobby-grid">
-            <!-- ===== 主題卡片開始 ===== -->
-            <div class="col-12 col-md-6">
-              <article class="card h-100">
-                <img
-                  src="../images/minxiong-food-cover.webp"
-                  alt="民雄在地小吃與校園周邊美食"
-                  class="card-img-top"
-                  style="height: 200px; object-fit: cover"
-                  loading="lazy"
-                />
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title">民雄美食大廳</h5>
-                  <p class="card-text">
-                    民雄小吃、校園周邊便當、夜市攤位⋯⋯
-                    整理中正大學學生常去的在地美食，課後覓食不用煩惱。
-                  </p>
-                  <a href="food.html" class="btn btn-success mt-auto"
-                    >探索民雄美食</a
-                  >
-                </div>
-              </article>
-            </div>
-            <!-- ===== 主題卡片結束 ===== -->
-
-            <!-- ===== 主題卡片開始 ===== -->
-            <div class="col-12 col-md-6">
-              <article class="card h-100">
-                <img
-                  src="../images/minsyong_attraction/minsyong_attraction_map.jpg"
-                  alt="民雄景點地圖"
-                  class="card-img-top"
-                  style="height: 200px; object-fit: cover"
-                  loading="lazy"
-                />
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title">民雄景點大廳</h5>
-                  <p class="card-text">
-                    旺萊山、觀光工廠、酒類文物館⋯⋯
-                    不出鄉就有地方可逛，民雄一日旅行景點推薦。
-                  </p>
-                  <a
-                    href="../minsyong-attraction.html"
-                    class="btn btn-success mt-auto"
-                    >探索民雄景點</a
-                  >
-                </div>
-              </article>
-            </div>
-            <!-- ===== 主題卡片結束 ===== -->
-          </div>
-        </section>
-      </main>
-
-      <button class="back-to-top" aria-label="回到頂端">&#8679;</button>
-
-      <footer class="site-footer" aria-label="頁尾">
-        <div class="footer-inner">
-          <p class="footer-desc">
-            CCU Chiayi Guide 是一個以 SEO/SEM 課程為核心的靜態網站，
-            整理中正大學新生與嘉義旅客需要的實用在地資訊。
-          </p>
-          <nav class="footer-nav" aria-label="頁尾導覽">
-            <ul>
-              <li><a href="../index.html">首頁</a></li>
-              <li><a href="../chiayi/index.html">嘉義總覽</a></li>
-              <li><a href="/minxiong/index.html">民雄總覽</a></li>
-              <li><a href="../ccu/index.html">中正大學總覽</a></li>
-            </ul>
-          </nav>
-          <p class="footer-copyright">
-            © 2026 CCU Chiayi Guide.
-            本站內容以真實在地資訊為準，不捏造店家資料。
-          </p>
-        </div>
-      </footer>
-    </div>
-
-    <script src="../js/main.js" defer></script>
-  </body>
 </html>
