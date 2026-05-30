@@ -1,0 +1,924 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-EX4HL59KV2"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-EX4HL59KV2");
+    </script>
+
+    <!-- =====================================================
+         【組員必改 1/3】SEO Metadata
+         ・title：建議 30–60 字元，格式：核心關鍵字｜CCU Chiayi Guide
+         ・description：建議 80–160 字元，自然描述頁面內容
+         ・canonical：換成此頁實際 URL，例如：
+           https://www.ccu-chiayi-guide.site/food.html
+    ===================================================== -->
+    <title>嘉義美食推薦｜CCU Chiayi Guide</title>
+    <meta
+      name="description"
+      content="嘉義火雞肉飯及在地小吃精選。
+                    各式嘉義美食推薦，幫你找到最想吃的那一碗。"
+    />
+    <link
+      rel="canonical"
+      href="https://www.ccu-chiayi-guide.site/chiayi/food.html"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/ccu-school-emblem.png" />
+    <link rel="apple-touch-icon" href="/images/ccu-school-emblem.png" />
+
+    <!-- Bootstrap 5 CSS（僅 CSS，不載入 Bootstrap JS） -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      crossorigin="anonymous"
+    />
+
+    <!-- 全站 CSS（載入順序不可更動） -->
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+
+    <!-- =====================================================
+         【組員必改 2/3】頁面專用 CSS
+         ・檔名依頁名命名，例如：food.css、traffic.css
+         ・僅放本頁獨有樣式，共用元件樣式請加入 components.css
+    ===================================================== -->
+    <link rel="stylesheet" href="/css/pages/PAGE.css" />
+    <style>
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        filter: invert(1);
+      }
+    </style>
+
+    <!-- =====================================================
+         【組員必改 3/3】JSON-LD Structured Data
+         ・WebPage：更新 name、description、url
+         ・BreadcrumbList：依實際層數調整 itemListElement
+           - 二層（首頁 / 本頁）：保留兩筆 ListItem
+           - 三層（首頁 / 分類 / 本頁）：新增第二筆並填入分類頁 URL
+         ・Schema 內容必須與頁面可見文字一致，不得捏造
+    ===================================================== -->
+    <script type="application/ld+json">
+      [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "嘉義美食推薦｜CCU Chiayi Guide",
+          "description": "嘉義火雞肉飯及在地小吃精選。
+                    各式嘉義美食推薦，幫你找到最想吃的那一碗。",
+          "url": "https://www.ccu-chiayi-guide.site/chiayi/food.html",
+          "inLanguage": "zh-TW",
+          "isPartOf": {
+            "@type": "WebSite",
+            "url": "https://www.ccu-chiayi-guide.site"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "首頁",
+              "item": "https://www.ccu-chiayi-guide.site/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "嘉義",
+              "item": "https://www.ccu-chiayi-guide.site/chiayi/index.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "嘉義美食推薦",
+              "item": "https://www.ccu-chiayi-guide.site/chiayi/food.html"
+            }
+          ]
+        }
+      ]
+    </script>
+  </head>
+
+  <body>
+    <div class="site-wrapper">
+      <!-- 固定導覽列（Sticky Header）-->
+      <div class="sticky-header-wrap sticky-top">
+        <header class="site-header" role="banner">
+          <div class="header-inner">
+            <a href="/" class="site-logo" aria-label="CCU Chiayi Guide 首頁">
+              <img
+                src="/images/ccu-chiayi-logo.png"
+                alt="CCU Chiayi Guide 網站標誌"
+                class="logo-emblem"
+                width="36"
+                height="36"
+              />
+              <span class="logo-text">
+                CCU Chiayi Guide
+                <span class="logo-sub">中正大學新生與嘉義生活指南</span>
+              </span>
+            </a>
+
+            <button
+              class="nav-toggle"
+              aria-label="開啟導覽選單"
+              aria-expanded="false"
+              aria-controls="site-nav"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </header>
+
+        <!-- 主要導覽
+             【組員提醒】將本頁對應的子選單 <a> 加上 aria-current="page"
+             例如：<a href="/minsyong-attraction.html" aria-current="page">民雄景點</a>
+        -->
+        <nav class="site-nav" id="site-nav" aria-label="主要導覽">
+          <ul>
+            <li><a href="/">首頁</a></li>
+            <li class="has-submenu">
+              <button type="button"  aria-current="true">
+                嘉義 <span class="nav-arrow" aria-hidden="true">▾</span>
+              </button>
+              <ul class="nav-submenu" aria-label="嘉義子選單">
+                <li><a href="/chiayi/index.html">嘉義總覽</a></li>
+                <li><a href="/chiayi/food.html" aria-current="page">嘉義美食</a></li>
+                <li><a href="/chiayi/attraction.html">嘉義景點</a></li>
+              </ul>
+            </li>
+            <li class="has-submenu">
+              <button type="button">
+                民雄 <span class="nav-arrow" aria-hidden="true">▾</span>
+              </button>
+              <ul class="nav-submenu" aria-label="民雄子選單">
+                <li><a href="/minxiong/index.html">民雄總覽</a></li>
+                <li><a href="/minxiong/food.html">民雄美食</a></li>
+                <li><a href="/minsyong-attraction.html">民雄景點</a></li>
+              </ul>
+            </li>
+            <li class="has-submenu">
+              <button type="button">
+                中正大學 <span class="nav-arrow" aria-hidden="true">▾</span>
+              </button>
+              <ul class="nav-submenu" aria-label="中正大學子選單">
+                <li><a href="/ccu/index.html">中正大學總覽</a></li>
+                <li><a href="/ccu/ccu-campus-life.html">新生懶人包</a></li>
+                <li><a href="/ccu/ccu-transport.html">交通資訊</a></li>
+                <li><a href="/ccu/food.html">中正大學美食</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- /.sticky-header-wrap（固定區塊結束） -->
+
+      <!-- =====================================================
+           麵包屑導覽（非固定，隨頁面自然滾動離開螢幕）
+           ・此區塊刻意置於 sticky wrapper 之外，不加任何 sticky 樣式
+           ・修改說明：
+             - 二層（首頁 / 本頁）：保留下方兩個 <li> 即可
+             - 三層（首頁 / 分類 / 本頁）：在兩者之間插入：
+               <li class="breadcrumb-item"><a href="/category.html">分類名稱</a></li>
+             - 將 "目前頁面名稱" 換成實際頁面名稱
+             - 記得同步更新 <head> 內的 BreadcrumbList JSON-LD
+      ===================================================== -->
+      <nav aria-label="麵包屑導覽" class="breadcrumb-nav container py-2">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="/">首頁</a></li>
+          <!-- 若有中間分類層，於此處新增一個 breadcrumb-item -->
+          <li class="breadcrumb-item"><a href="index.html">嘉義</a></li>
+          <li class="breadcrumb-item active" aria-current="page">
+            嘉義美食推薦
+          </li>
+        </ol>
+      </nav>
+      <!-- /麵包屑導覽 -->
+
+      <!-- =====================================================
+           主內容區塊（兩欄 RWD 佈局）
+           ・site-main：專案 layout.css 的 max-width 與版面間距
+           ・container py-0：Bootstrap 響應式容器與垂直留白
+           ・id="main-content"：供無障礙跳轉錨點使用
+           ・內部使用 Bootstrap row 建立兩欄架構：
+             左欄 col-md-3 → TOC 側欄（桌機 sticky，手機橫向捲動）
+             右欄 col-md-9 → 主要圖文內容
+      ===================================================== -->
+      <main class="site-main container py-0" id="main-content">
+        <div class="row align-items-start">
+          <!-- ===================================================
+               注意：row 必須保留 align-items-start
+               ・Bootstrap row 預設將欄高撐滿，會讓 aside sticky 失效
+               ・align-items-start 使 aside 保持自然高度，sticky 才能運作
+          =================================================== -->
+
+          <!-- =====================================================
+               TOC 側欄（左欄）
+               ・col-12：手機版佔滿整行，顯示在內文上方
+               ・col-md-2：桌機版佔 2 格寬，與麵包屑左緣對齊
+               ・sticky-md-top：Bootstrap 5 響應式 sticky，
+                 只在 md（≥768px）以上生效；手機版自然流動，不固定
+               ・align-self-md-start：防止側欄被撐滿父欄高度（sticky 必要條件）
+               ・style="top: 140px"：讓側欄錯開頂部固定導覽列的高度
+                 （header + nav 兩層合計約 140px，與 scroll-padding-top 保持一致）
+          ===================================================== -->
+          <aside
+            class="col-12 col-md-2 sticky-md-top align-self-md-start"
+            style="top: 140px"
+          >
+            <!-- ===============================================
+                 頁內目錄導覽（TOC）
+                 ・d-flex flex-column align-items-stretch：
+                   所有斷點一律由上而下排列，每個膠囊獨佔一列
+                   align-items-stretch 使膠囊撐滿側欄寬度，文字置中
+                 【組員提醒】href 必須與右欄 <section id="..."> 保持同步
+            =============================================== -->
+            <span class="d-block small text-muted mb-1 text-center"
+              >快速搜尋</span
+            >
+            <nav
+              class="d-flex flex-column align-items-stretch toc-nav"
+              aria-label="頁內目錄"
+            >
+              <!-- 【組員填寫 TOC 連結】將下方換成實際章節名稱，href 對應右欄 section id -->
+              <a
+                href="#section-1"
+                class="btn btn-sm btn-outline-success rounded-pill m-2"
+                >嘉義美食</a
+              >
+              <a
+                href="#section-2"
+                class="btn btn-sm btn-outline-success rounded-pill m-2"
+                >民主火雞肉飯</a
+              >
+              <a
+                href="#section-3"
+                class="btn btn-sm btn-outline-success rounded-pill m-2"
+                >嘉義公園火雞肉飯</a
+              >
+              <a
+                href="#section-4"
+                class="btn btn-sm btn-outline-success rounded-pill m-2"
+                >友雞肥</a
+              >
+              <!-- <a
+                href="#section-5"
+                class="btn btn-sm btn-outline-success rounded-pill m-2"
+                >龍坐鐵板燒</a
+              > -->
+              <!-- <a
+                href="#section-6"
+                class="btn btn-sm btn-outline-success rounded-pill m-2"
+                >民雄阿君鵝肉</a
+              > -->
+              <a
+                href="#section-9"
+                class="btn btn-sm btn-outline-success rounded-pill m-2"
+                >品安豆花</a
+              >
+                            <a
+                href="#section-10"
+                class="btn btn-sm btn-outline-success rounded-pill m-2"
+                >體育館海鮮碳烤</a
+              >
+              <!-- <a
+                href="#section-7"
+                class="btn btn-sm btn-outline-success rounded-pill m-2"
+                >Long Stay</a
+              > -->
+              <a
+                href="#section-8"
+                class="btn btn-sm btn-outline-success rounded-pill m-2"
+                >金甘茶</a
+              >
+            </nav>
+          </aside>
+          <!-- /TOC 側欄 -->
+
+          <!-- =====================================================
+               主要圖文內容（右欄）
+               ・col-12：手機版佔滿整行
+               ・col-md-10：桌機版佔 10 格寬（搭配左欄 col-md-2，合計 12）
+          ===================================================== -->
+          <article class="col-12 col-md-10">
+            <!-- ===============================================
+                 【組員從這裡開始填寫內容】
+
+                 規定：
+                 ・每頁只能有一個 <h1>，不得省略
+                 ・<h1> 必須包含本頁核心關鍵字
+                 ・標題層級依結構遞進：h1 → h2 → h3，不得跳層
+                 ・重要文字必須直接寫在 HTML 中，不得只靠 JS 產生
+                 ・<section id="..."> 的 id 必須與左欄 TOC href 一致
+            =============================================== -->
+
+            <h1>嘉義美食推薦</h1>
+            <div class="hero-tags">
+              <span class="tag">嘉義美食</span>
+              <span class="tag">在地小吃</span>
+              <span class="tag">學生美食</span>
+              <span class="tag">嘉義飲料店</span>
+            </div>
+
+            <!-- 子章節範例（可複製多份，id 需與左欄 TOC href 對應） -->
+            <section class="content-section" id="section-1">
+              <h2>嘉義美食</h2>
+              <p>
+                嘉義除了火雞肉飯之外，
+                也有許多受到學生與旅客喜愛的人氣餐廳與在地美食。
+                從傳統小吃、鐵板燒到聚餐型餐廳，
+                不同店家各自擁有特色與支持者。
+              </p>
+              <p>
+                以下整理幾間在網路評價與在地討論中較常被提及的店家，
+                包含民主火雞肉飯、嘉義公園火雞肉飯、友雞肥、品安豆花、體育館海鮮碳烤以及金甘茶，
+                作為到嘉義旅遊或中正大學學生平時用餐的參考。
+                實際營業時間與餐點內容，建議出發前查詢店家最新公告。
+              </p>
+
+
+              <!-- <div class="content-image my-4 w-75 mx-auto d-block">
+                <img
+                  src="/images/minsyong_attraction/minsyong_attraction_map.jpg"
+                  alt="民雄景點地圖"
+                  class="img-fluid rounded shadow-sm"
+                />
+                <p class="image-source small text-muted mt-2 text-center">
+                  圖片來源：民雄鄉公所官網
+                </p>
+              </div> -->
+            </section>
+
+            <section class="content-section" id="section-2">
+              <h2>民主火雞肉飯</h2>
+              <p>
+                民主火雞肉飯是嘉義相當具代表性的火雞肉飯名店之一，
+                無論平日或假日，經常都能看到排隊人潮，
+                也是許多旅客到嘉義時會特別造訪的熱門店家。
+                店家以香氣濃郁的雞油與油蔥醬汁聞名，
+                搭配火雞肉與白飯後風味較重，和部分較清淡的雞肉飯店家形成不同特色。
+              </p>
+              <p>   
+                除了火雞肉飯本身外，
+                許多網路評論也提到店內的小菜種類相當豐富，
+                像是涼拌菜、滷味與湯品等都受到不少人推薦。
+                部分網友認為店家的醬汁與油蔥香氣是最大特色，
+                也有人特別喜歡雞片飯與搭配半熟蛋的吃法。
+              </p> 
+              <p>
+                由於店家位於嘉義市區熱門地段，交通相對方便，
+                也附設停車空間，因此吸引不少觀光客與在地人前往用餐。
+                不過因為口味偏重、油蔥風味明顯，
+                在網路上也存在不同口味派別的討論，
+                是屬於特色相當鮮明的嘉義火雞肉飯店家之一。
+              </p>
+
+              
+              <div class="content-image my-4">
+                <img
+                  src="/images/chiayi-food/minzhu.jpg"
+                  alt="民主火雞肉飯"
+                  class="img-fluid rounded shadow-sm w-50 mx-auto d-block"
+                />
+                <p class="image-source small text-muted mt-2 text-center">
+                  圖片來源：民主火雞肉飯臉書
+                </p>
+              </div>
+
+              <div class="map-container my-4">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.550407893389!2d120.45746530000001!3d23.4766765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e9436240b2ceb%3A0x194d29bb3cc6554!2z5rCR5Li754Gr6Zue6IKJ6aOv!5e0!3m2!1szh-TW!2stw!4v1779720768047!5m2!1szh-TW!2stw" 
+                width="75%" 
+                height="450" 
+                style="border:0;" 
+                class="mx-auto d-block rounded shadow-sm"
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                <p class="text-muted mt-2">
+                  營業時間(僅供參考)：星期一至日 10:00-20:40
+                </p>
+                <p class="text-muted mt-2">
+                  電話：05 216 2666
+                </p>
+              </div>
+            </section>
+
+            <section class="content-section" id="section-3">
+              <h2>嘉義公園火雞肉飯</h2>
+              <p>
+                嘉義公園火雞肉飯也是不少在地人與網路評論中常被提到的嘉義火雞肉飯店家之一，
+                店家鄰近嘉義公園與北香湖公園，地點相對方便，
+                也是許多人安排嘉義半日遊或早餐行程時會順路造訪的店家。
+
+                許多Google Maps與美食文章評論提到，
+                店內的火雞肉飯口味偏傳統路線，
+                雞肉口感較嫩，搭配油蔥與醬汁後香氣明顯但不會過於油膩。
+                除了火雞肉飯本身外，味噌湯、小菜與雞片飯也經常被網友一起推薦。
+
+                另外，不少評論也提到店內環境相對整潔、服務態度親切，
+                整體價格屬於平價路線，
+                因此除了觀光客外，也吸引不少在地居民與學生前往用餐。
+                由於店家營業時間偏早餐與午餐時段，
+                若想避開人潮，建議可以提早前往。
+              </p>
+              <div class="content-image my-4">
+                <img
+                  src="/images/chiayi-food/gongyuan.jpg"
+                  alt="嘉義公園火雞肉飯"
+                  class="img-fluid rounded shadow-sm w-50 mx-auto d-block"
+                />
+                <p class="image-source small text-muted mt-2 text-center">
+                  圖片來源：嘉義公園火雞肉飯臉書
+                </p>
+              </div>
+
+              <div class="map-container my-4">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.2139514863966!2d120.45356299999996!3d23.488802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e95cb8cd0cb49%3A0x627e03fef47d8867!2z5ZiJ576p5YWs5ZyS54Gr6Zue6IKJ6aOv77yI5YWs5LyR6KuL55yLRkIp!5e0!3m2!1szh-TW!2stw!4v1779721433328!5m2!1szh-TW!2stw" 
+                width="75%" 
+                height="450" 
+                style="border:0;" 
+                class="mx-auto d-block rounded shadow-sm"
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+                <p class="text-muted mt-2">
+                  營業時間(僅供參考)：<br>
+                  星期一、三、四、五、六、日 06:00-13:30<br>
+                  星期二公休
+                </p>
+                <p class="text-muted mt-2">
+                  電話：05 278 1372
+                </p>
+              </div>
+            </section>
+
+            <section class="content-section" id="section-4">
+              <h2>友雞肥</h2>
+              <p>
+                友雞肥是嘉義近年相當受歡迎的炸物店之一，
+                在Google Maps與社群平台上擁有相當高的人氣，
+                營業時段經常可以看到排隊人潮。
+                許多網友認為店家的最大特色在於獨特的中藥胡椒粉香氣，
+                與一般常見的台式炸雞店形成不同風味。 
+              </p>
+              <p>
+                不少評論特別推薦店內的雞肉串、雞翅與雞腿，
+                認為炸物外皮酥脆、肉質多汁，
+                再搭配帶有中藥香氣的胡椒粉後，味道層次更加明顯。
+                其中雞肉串更是許多人在Google評論與美食文章中經常提到的人氣品項。 
+              </p>
+              <p>
+                除了炸物本身外，
+                也有不少人提到店家的價格相對平價、份量充足，
+                適合作為下午點心或宵夜選擇。
+                由於店面位於嘉義市區熱鬧地段，交通方便，
+                因此不只是在地學生，也吸引許多旅客專程前往購買。 
+              </p>
+
+              <div class="content-image my-4">
+                <img
+                  src="/images/chiayi-food/youjifei.jpg"
+                  alt="友雞肥炸物"
+                  class="img-fluid rounded shadow-sm w-50 mx-auto d-block"
+                />
+                <p class="image-source small text-muted mt-2 text-center">
+                  圖片來源：友雞肥-崇文店臉書
+                </p>
+              </div>
+
+              <div class="map-container my-4">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58553.78119385506!2d120.4538119!3d23.4744805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e943750bec26b%3A0x1f6ea6a8fca08b8b!2z5Y-L6Zue6IKlLeW0h-aWh-W6lw!5e0!3m2!1szh-TW!2stw!4v1779722735077!5m2!1szh-TW!2stw" 
+                width="75%" 
+                height="450" 
+                style="border:0;" 
+                class="mx-auto d-block rounded shadow-sm"
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+                <p class="text-muted mt-2">
+                  營業時間(僅供參考)：<br>星期一 11:00-20:30<br>
+                  星期二、三、四、五、六、日 11:00-21:30
+                </p>
+                <p class="text-muted mt-2">
+                  電話：05 227 0723
+                </p>
+              </div>
+            </section>
+
+            <!-- <section class="content-section" id="section-5">
+              <h2>龍坐鐵板燒</h2>
+              <p>
+                龍坐鐵板燒是民雄地區相當有人氣的平價鐵板燒店，
+                在Google Maps上擁有相當高的評價與評論數，
+                也是不少中正大學學生聚餐或日常用餐時常提到的店家。
+                由於店面空間較大、座位數多，
+                即使在熱門用餐時段也吸引許多人前往。
+              </p>
+              <p>
+                許多網友特別推薦店內的去骨雞腿排、厚切豬排與牛肉系列餐點，
+                認為鐵板現炒香氣明顯，肉類份量充足，
+                搭配鐵板燒常見的豆芽菜與青菜後，整體相當有飽足感。
+                另外，也有不少評論提到店家的醬料風味偏重口味路線，
+                對喜歡台式鐵板燒香氣的人來說相當具有特色。
+              </p>
+              <p>
+                除了主餐外，
+                部分網路評論也提到店家的白飯、湯品與飲料供應，
+                整體 CP 值受到不少學生與在地居民好評。
+                由於價格相對平價、餐點種類選擇多，
+                因此成為民雄地區討論度相當高的鐵板燒店之一。
+              </p>
+
+              <div class="content-image my-4">
+                <img
+                  src="/images/chiayi-food/longzuo.jpg"
+                  alt="龍坐鐵板燒"
+                  class="img-fluid rounded shadow-sm w-50 mx-auto d-block"
+                />
+                <p class="image-source small text-muted mt-2 text-center">
+                  圖片來源：龍坐鐵板燒臉書
+                </p>
+              </div>
+
+              <div class="map-container my-4">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14629.296165526464!2d120.4254707301203!3d23.5568027521534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346ebddd3f2b83f3%3A0xa08c20da2747dc72!2z6b6N5Z2Q6ZC15p2_54eS!5e0!3m2!1szh-TW!2stw!4v1779724127080!5m2!1szh-TW!2stw" 
+                width="75%" 
+                height="450" 
+                style="border:0;" 
+                class="mx-auto d-block rounded shadow-sm"
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+                <p class="text-muted mt-2">
+                  營業時間(僅供參考)：<br>
+                  星期一、三、四、六、日 11:00-14:00，16:60-21:00<br>
+                  星期二、五公休
+                </p>
+                <p class="text-muted mt-2">
+                  電話：05 206 5228
+                </p>
+              </div>
+            </section> -->
+
+            <!-- <section class="content-section" id="section-6">
+              <h2>民雄阿君鵝肉</h2>
+              <p>
+                民雄阿君鵝肉是嘉義市相當具人氣的鵝肉店之一，
+                在Google Maps與網路美食評論中擁有相當高的討論度，
+                不少人認為是到嘉義時值得嘗試的在地小吃店家。
+                店內以鵝肉切盤與各式熱炒、小菜聞名，
+                用餐時間經常能看到不少排隊人潮。
+              </p>
+              <p>
+                許多網友特別推薦店家的煙燻鵝肉與鵝肉切盤，
+                認為肉質嫩度與油脂比例表現不錯，
+                搭配特製醬料後風味更加明顯。
+                除了主餐之外，米血、下水湯與各式小菜也經常在評論中被提到，
+                不少人會搭配白飯或麵類一起享用。
+              </p>
+              <p>
+                另外，也有不少Google評論提到店家整體份量充足、價格相對平價，
+                因此除了觀光客之外，也吸引不少在地居民與學生前往用餐。
+                由於店家人氣較高，熱門時段可能需要排隊，
+                若想避開人潮，建議可提早前往。
+              </p>
+
+              <div class="content-image my-4">
+                <img
+                  src="/images/chiayi-food/ajun.jpg"
+                  alt="民雄阿君鵝肉菜單"
+                  class="img-fluid rounded shadow-sm w-50 mx-auto d-block"
+                />
+                <p class="image-source small text-muted mt-2 text-center">
+                  圖片來源：民雄阿君鵝肉臉書
+                </p>
+              </div>
+
+              <div class="map-container my-4">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14629.494521256243!2d120.42341775499293!3d23.55502086086383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346ebddfb87c9007%3A0xaaa66fc18feb5d93!2z5rCR6ZuE6Zi_5ZCb6bWd6IKJ!5e0!3m2!1szh-TW!2stw!4v1779726111012!5m2!1szh-TW!2stw" 
+                width="75%" 
+                height="450" 
+                style="border:0;" 
+                class="mx-auto d-block rounded shadow-sm"
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+                <p class="text-muted mt-2">
+                  營業時間(僅供參考)：<br>
+                  星期一、三、四、五、六、日 09:00-19:00<br>
+                  星期二公休
+                </p>
+                <p class="text-muted mt-2">
+                  電話：05 226 9137
+                </p>
+              </div>
+            </section> -->
+
+            <section class="content-section" id="section-9">
+              <h2>品安豆花</h2>
+              <p>
+                在享用完嘉義的在地小吃與特色美食後，
+                甜點當然也是旅途中不可缺少的一部分。
+                除了火雞肉飯與各式鹹食之外，嘉義也有不少受到學生與旅客喜愛的人氣甜品店，
+                其中品安豆花便是在Google Maps與網路評論中擁有高討論度的店家之一。
+              </p>
+              <p>
+                品安豆花是嘉義相當知名的豆花甜品店，
+                不少網友認為店家的最大特色在於豆花口感細緻綿密，
+                搭配糖水後整體風味偏清爽路線，
+                因此即使在炎熱天氣中也相當受到歡迎。
+                由於店家位於嘉義市區，交通方便，
+                也吸引許多旅客在用餐後順路前往。
+              </p>
+              <p>
+                許多Google Maps評論特別推薦店內的傳統豆花、珍珠豆花與配料系列，
+                認為配料選擇豐富，甜度不會過於厚重，
+                整體口感具有傳統甜品店的特色。
+                另外，也有不少人提到店家的芋圓、粉圓與花生等配料表現不錯，
+                搭配冰品後相當適合作為飯後甜點。
+              </p>
+              <p>
+                除了甜品本身之外，
+                不少網友也認為店內環境乾淨、價格相對平價，
+                因此不只是觀光客，也有許多在地學生與居民會回訪購買。
+                由於店家人氣相當高，熱門時段經常需要排隊，
+                若想避開人潮，建議可以提早前往。
+              </p>
+
+              <div class="content-image my-4">
+                <img
+                  src="/images/chiayi-food/pinandohua.jpg"
+                  alt="品安豆花"
+                  class="img-fluid rounded shadow-sm w-50 mx-auto d-block"
+                />
+                <p class="image-source small text-muted mt-2 text-center">
+                  圖片來源：嘉義品安豆漿豆花臉書
+                </p>
+              </div>
+
+              <div class="map-container my-4">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58551.83403659141!2d120.450882!3d23.4788674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e94316dbf72df%3A0xac9ce76977b9f881!2z5ZiJ576p5ZOB5a6J6LGG5ry_6LGG6Iqx!5e0!3m2!1szh-TW!2stw!4v1779874860960!5m2!1szh-TW!2stw" 
+                width="75%" 
+                height="450" 
+                style="border:0;" 
+                class="mx-auto d-block rounded shadow-sm"
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+                <p class="text-muted mt-2">
+                  營業時間(僅供參考)：星期一至日 11:00-22:00
+                </p>
+                <p class="text-muted mt-2">
+                  電話：05 228 0689
+                </p>
+              </div>
+            </section>
+
+            <section class="content-section" id="section-10">
+              <h2>體育館海鮮碳烤</h2>
+              <p>
+                除了白天的小吃與甜點之外，
+                嘉義的宵夜文化也相當受到在地人與旅客喜愛。
+                其中熱炒、海鮮與碳烤類店家更是許多人聚餐、聊天或宵夜時的熱門選擇，
+                而體育館海鮮碳烤便是嘉義相當具代表性的深夜人氣熱炒店之一。
+              </p>
+              <p>
+                不少網友分享，
+                店家最大的特色在於熱炒香氣濃厚、餐點份量充足，
+                即使到了深夜時段仍經常座無虛席。
+                許多網友認為店內氣氛熱鬧，很有台式熱炒店與宵夜聚餐的感覺，
+                因此吸引不少學生、家庭與朋友聚會前往用餐。
+              </p>
+              <p>
+                在眾多餐點之中，
+                招牌油雞飯幾乎是網路評論中最常被提到的人氣餐點之一。
+                不少人認為雞油、油蔥與醬汁香氣相當明顯，
+                搭配雞肉後整體風味偏重口味路線，也相當下飯。
+                另外，東石蚵酥、三杯系列、蛤蠣與各式熱炒海鮮也經常受到推薦，
+                部分評論則提到店家屬於重油重鹹風格，對喜歡台式熱炒香氣的人來說相當具有特色。
+              </p>
+              <p>
+                由於店家人氣非常高，
+                不少網友分享熱門時段需要排隊或提早訂位，
+                尤其假日晚餐與宵夜時間人潮更加明顯。
+                若想體驗嘉義在地熱炒與深夜聚餐文化，
+                體育館海鮮碳烤是不少人推薦的熱門店家之一。
+              </p>
+
+              <div class="content-image my-4">
+                <img
+                  src="/images/chiayi-food/tiyuguan.jpg"
+                  alt="體育館海鮮碳烤的油雞飯"
+                  class="img-fluid rounded shadow-sm w-50 mx-auto d-block"
+                />
+                <p class="image-source small text-muted mt-2 text-center">
+                  圖片來源：嘉義體育館碳烤臉書
+                </p>
+              </div>
+
+              <div class="map-container my-4">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.596162535542!2d120.4577096109118!3d23.475027099204166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e944849e92ad9%3A0x8b1abf0a2dccae59!2z6auU6IKy6aSo5rW36a6u56Kz54Ok!5e0!3m2!1szh-TW!2stw!4v1779876102234!5m2!1szh-TW!2stw" 
+                width="75%" 
+                height="450" 
+                style="border:0;" 
+                class="mx-auto d-block rounded shadow-sm"
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+                <p class="text-muted mt-2">
+                  營業時間(僅供參考)：星期一至日 17:00-00:00
+                </p>
+                <p class="text-muted mt-2">
+                  電話：05 278 0851
+                </p>
+              </div>
+            </section>
+
+            <!-- <section class="content-section" id="section-7">
+              <h2>Long Stay</h2>
+              <p>
+                品嘗完嘉義在地美食後，
+                當然也少不了台灣人最喜歡的手搖飲。
+                除了傳統小吃之外，嘉義市區也有不少受到學生與年輕族群歡迎的特色飲料店，
+                其中Long Stay便是在網路上擁有相當高討論度的人氣店家之一。
+              </p>
+              <p>
+                Long Stay是嘉義近年相當受到歡迎的手搖飲品牌，
+                店面風格以簡約文青感為主，
+                在Google Maps與社群平台上累積了不少好評與打卡照片。
+                許多網友認為店家的飲品不只外觀具有特色，
+                整體甜度與茶香表現也相當穩定，因此吸引不少學生與年輕族群前往購買。
+              </p>
+              <p>
+                不少評論特別推薦店內的水果系列、奶蓋系列與茶類飲品，
+                認為口感清爽、層次感明顯，
+                部分飲品也會依季節推出限定口味。
+                除了飲品本身外，
+                也有許多人提到店面環境與包裝設計相當適合拍照，
+                因此在社群平台上擁有不低的人氣。
+              </p>
+              <p>
+                由於店家位於嘉義市區熱鬧地段，交通相對方便，
+                無論是逛街、用餐後順路購買，
+                或是與朋友聚會聊天，都相當適合作為嘉義旅遊中的休息選擇之一。
+              </p>
+
+              <div class="content-image my-4">
+                <img
+                  src="/images/chiayi-food/longstay.jpg"
+                  alt="Long Stay手搖飲"
+                  class="img-fluid rounded shadow-sm w-50 mx-auto d-block"
+                />
+                <p class="image-source small text-muted mt-2 text-center">
+                  圖片來源：Long Stay 現泡茶集團臉書
+                </p>
+              </div>
+
+              <div class="map-container my-4">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14629.167674321045!2d120.42137575499437!3d23.55795696083157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346ebddec1b9907f%3A0x89b165a17ecd5f4b!2zTG9uZyBTdGF554--5rOh6Iy2KOm-jeWWnOWXsuKAk-awkembhOe4veW6lynjgJDmsJHpm4TkurrmsKPpo7LmlpnlupfjgJHotoXlpb3llp3miYvmkJbmjqjolqbvvZzkurrmsKPpo7Llk4HvvZzlv4Xllp3po7LmlpnvvZzmjqjolqbojLbpo7I!5e0!3m2!1szh-TW!2stw!4v1779726826654!5m2!1szh-TW!2stw" 
+                width="75%" 
+                height="450" 
+                style="border:0;" 
+                class="mx-auto d-block rounded shadow-sm"
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+                <p class="text-muted mt-2">
+                  營業時間(僅供參考)：星期一至日 10:00-20:00
+                </p>
+                <p class="text-muted mt-2">
+                  電話：05 206 2313
+                </p>
+              </div>
+            </section> -->
+
+            <section class="content-section" id="section-8">
+              <h2>金甘茶</h2>
+              <p>
+                品嘗完嘉義在地美食後，
+                當然也少不了台灣人最喜歡的手搖飲。
+                在嘉義眾多飲料店中，也有一些結合在地水果特色的手搖飲品牌，
+                金甘茶正是其中一個代表。
+                茶如其名結合了金桔和甘蔗，
+                也是不少網友在Google Maps評論中特別提到的品牌印象。
+              </p>
+              <p>
+                金甘茶結合水果香氣與茶飲風味，
+                整體口感偏清爽路線，因此受到不少學生與年輕族群喜愛。
+                許多評論認為店家的飲品甜度較自然，
+                部分水果系列也帶有明顯果香，適合炎熱天氣時飲用。
+              </p>
+              <p>
+                除了招牌特色之外，
+                也有不少Google Maps評論提到店家的價格相對平價、飲品種類選擇多，
+                因此成為許多人日常購買飲料時的熱門選擇。
+                部分網友也認為店家出餐速度快、店員服務態度不錯，
+                即使在熱門時段仍擁有相當高的人氣。
+              </p>
+
+              <div class="content-image my-4">
+                <img
+                  src="/images/chiayi-food/jingancha.png"
+                  alt="金甘茶店面"
+                  class="img-fluid rounded shadow-sm w-50 mx-auto d-block"
+                />
+                <p class="image-source small text-muted mt-2 text-center">
+                  圖片來源：擷取自Google街景
+                </p>
+              </div>
+
+              <div class="map-container my-4">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14639.10868223901!2d120.4658428670448!3d23.46850090167588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e9507f84cf88d%3A0xd7bffe3a52d2d391!2z6YeR55SY6Iy2!5e0!3m2!1szh-TW!2stw!4v1779728324065!5m2!1szh-TW!2stw" 
+                width="75%" 
+                height="450" 
+                style="border:0;" 
+                class="mx-auto d-block rounded shadow-sm"
+                allowfullscreen="" loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+                <p class="text-muted mt-2">
+                  營業時間(僅供參考)：<br>
+                  星期一至六 09:30-21:00<br>
+                  星期日公休
+                </p>
+                <p class="text-muted mt-2">
+                  電話：05 227 0087
+                </p>
+              </div>
+            </section>
+
+            <!-- 更多內容區塊請繼續往下擴展 -->
+          </article>
+          <!-- /主要圖文內容 -->
+        </div>
+        <!-- /.row -->
+      </main>
+      <!-- /主內容區塊 -->
+
+      <!-- 回到頂部按鈕（由 js/main.js 的 initBackToTop() 控制顯示） -->
+      <button class="back-to-top" aria-label="回到頂端">&#8679;</button>
+
+      <!-- =====================================================
+           全站頁尾（各頁保持一致，請勿修改此區塊）
+      ===================================================== -->
+      <footer class="site-footer" aria-label="頁尾">
+        <div class="footer-inner">
+          <p class="footer-desc">
+            CCU Chiayi Guide 是一個以 SEO/SEM 課程為核心的靜態網站，
+            整理中正大學新生與嘉義旅客需要的實用在地資訊。
+          </p>
+          <nav class="footer-nav" aria-label="頁尾導覽">
+            <ul>
+              <li><a href="/">首頁</a></li>
+              <li><a href="/chiayi/index.html">嘉義總覽</a></li>
+              <li><a href="/minxiong/index.html">民雄總覽</a></li>
+              <li><a href="/ccu/index.html">中正大學總覽</a></li>
+            </ul>
+          </nav>
+          <p class="footer-copyright">
+            © 2026 CCU Chiayi Guide.
+            本站內容以真實在地資訊為準，不捏造店家資料。
+          </p>
+        </div>
+      </footer>
+      <!-- /頁尾 -->
+    </div>
+    <!-- /.site-wrapper -->
+
+    <!-- 全站共用 JS（手機導覽、回到頂部、平滑捲動）-->
+    <script src="/js/main.js" defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+    <!-- 頁面專用 JS（若本頁有互動功能再取消註解，檔名依頁名命名）-->
+    <!-- <script src="/js/pages/PAGE.js" defer></script> -->
+  </body>
+</html>
