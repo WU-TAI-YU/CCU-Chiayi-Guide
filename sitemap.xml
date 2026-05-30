@@ -31,8 +31,8 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.ccu-chiayi-guide.site/chiayi/food.html</loc>
-        <lastmod>2026-05-19</lastmod>
+        <loc>https://www.ccu-chiayi-guide.site/minxiong/attraction.html</loc>
+        <lastmod>2026-05-31</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -231,6 +231,36 @@
     <url>
         <loc>https://www.ccu-chiayi-guide.site/articles/ccu/food/chiming-skewer.html</loc>
         <lastmod>2026-05-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.ccu-chiayi-guide.site/articles/minxiong/attraction/wanlaisan.html</loc>
+        <lastmod>2026-05-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.ccu-chiayi-guide.site/articles/minxiong/attraction/kumquat-factory.html</loc>
+        <lastmod>2026-05-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.ccu-chiayi-guide.site/articles/minxiong/attraction/khtoy.html</loc>
+        <lastmod>2026-05-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.ccu-chiayi-guide.site/articles/minxiong/attraction/chiayi-distillery.html</loc>
+        <lastmod>2026-05-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.ccu-chiayi-guide.site/articles/minxiong/attraction/performing-arts-center.html</loc>
+        <lastmod>2026-05-31</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
