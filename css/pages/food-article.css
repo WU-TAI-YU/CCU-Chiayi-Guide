@@ -1,0 +1,87 @@
+/* food-article.css — 單一店家文章頁共用樣式（30 個店家頁均使用此檔） */
+
+/* ── 基本資訊區塊 ── */
+.store-info-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.store-info-table th,
+.store-info-table td {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #dee2e6;
+  vertical-align: top;
+}
+
+.store-info-table th {
+  width: 6rem;
+  background-color: #f8f9fa;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ── 圖片 / 輪播區塊 ── */
+.article-carousel {
+  height: 320px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.article-carousel .carousel-inner,
+.article-carousel .carousel-item {
+  height: 100%;
+}
+
+.article-carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.article-single-img {
+  width: 100%;
+  max-height: 360px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* 輪播控制按鈕反轉顏色（深色箭頭 → 白色） */
+.article-carousel .carousel-control-prev-icon,
+.article-carousel .carousel-control-next-icon {
+  filter: none;
+}
+
+/* ── 推薦餐點列表 ── */
+.recommend-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.recommend-list li {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.recommend-list li:last-child {
+  border-bottom: none;
+}
+
+/* ── Google Maps 嵌入 ── */
+.article-map iframe {
+  width: 100%;
+  height: 380px;
+  border: 0;
+  border-radius: 0.5rem;
+}
+
+/* ── 圖片來源文字 ── */
+.img-credit {
+  font-size: 0.8rem;
+  color: #6c757d;
+  text-align: center;
+  margin-top: 0.4rem;
+}
