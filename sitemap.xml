@@ -55,6 +55,18 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://www.ccu-chiayi-guide.site/ccu/ccu-campus-life.html</loc>
+        <lastmod>2026-06-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.ccu-chiayi-guide.site/ccu/ccu-transport.html</loc>
+        <lastmod>2026-06-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://www.ccu-chiayi-guide.site/articles/chiayi/food/minzhu-turkey-rice.html</loc>
         <lastmod>2026-05-30</lastmod>
         <changefreq>monthly</changefreq>

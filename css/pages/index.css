@@ -2,18 +2,12 @@
 .index-hero {
   position: relative;
   overflow: hidden;
-  min-height: calc(100vh - 70px);
+  min-height: calc(100vh - 56px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background: linear-gradient(135deg, #2A4535 0%, #3A5F48 100%);
-}
-
-@media (min-width: 768px) {
-  .index-hero {
-    min-height: calc(100vh - 112px);
-  }
 }
 
 .hero-bg-img {
@@ -93,12 +87,12 @@
   transform: translateY(-2px);
 }
 
-/* ── Index main: remove top padding so anchor-nav acts as scroll hint ── */
+/* ── Index main ── */
 .index-main {
   padding-top: 0;
 }
 
-.index-main>.page-anchor-nav:first-child {
+.index-main > .page-anchor-nav:first-child {
   margin-top: var(--spacing-xl);
 }
 
@@ -165,6 +159,152 @@
 .page-anchor-nav a:hover {
   background-color: var(--color-border);
   text-decoration: none;
+}
+
+/* ── Region section layout ── */
+.index-region-title {
+  border-left: 4px solid var(--color-accent);
+  padding-left: var(--spacing-md);
+}
+
+.index-region-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+  .index-region-grid {
+    grid-template-columns: 7fr 5fr;
+    align-items: stretch;
+  }
+}
+
+/* ── Sub-nav links ── */
+.index-region-subnav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+@media (min-width: 768px) {
+  .index-region-subnav {
+    height: 100%;
+  }
+
+  .index-region-subnav a {
+    flex: 1;
+  }
+}
+
+.index-region-subnav a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--color-bg-light);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  color: var(--color-text);
+  transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s, transform 0.15s;
+}
+
+.index-region-subnav a:hover {
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-md);
+  background-color: var(--color-bg);
+  transform: translateX(4px);
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.index-region-subnav a:hover .subnav-title {
+  color: var(--color-accent-dark);
+}
+
+.subnav-title {
+  display: block;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 0.125rem;
+  transition: color 0.2s;
+}
+
+.subnav-desc {
+  display: block;
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+/* ── Hub card cover image (flush to card edges) ── */
+.index-hub-card {
+  overflow: hidden;
+  position: relative;
+}
+
+/* Stretched link — entire card is clickable */
+.index-hub-card .card-link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.index-hub-card img {
+  width: calc(100% + 2 * var(--spacing-lg));
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+  margin-top: calc(-1 * var(--spacing-lg));
+  margin-left: calc(-1 * var(--spacing-lg));
+  margin-right: calc(-1 * var(--spacing-lg));
+  margin-bottom: var(--spacing-md);
+}
+
+/* ── FAQ <details> accordion ── */
+.index-faq details {
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--spacing-md) 0;
+}
+
+.index-faq details:first-of-type {
+  border-top: 1px solid var(--color-border);
+}
+
+.index-faq summary {
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-primary);
+  padding-right: var(--spacing-sm);
+  font-size: 1rem;
+}
+
+.index-faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.index-faq summary::after {
+  content: '+';
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  transition: content 0.15s;
+}
+
+.index-faq details[open] > summary::after {
+  content: '−';
+}
+
+.index-faq details p {
+  margin-top: var(--spacing-sm);
+  color: var(--color-text-muted);
+  font-size: 0.9375rem;
+  padding-right: var(--spacing-xl);
 }
 
 /* ── Splash Screen ── */
