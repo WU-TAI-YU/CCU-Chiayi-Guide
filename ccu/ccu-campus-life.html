@@ -2,7 +2,7 @@
 <html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EX4HL59KV2"></script>
   <script>
@@ -11,7 +11,7 @@
     gtag('js', new Date());
     gtag('config', 'G-EX4HL59KV2');
   </script>
-  <!-- SEO Meta (強化關鍵字 – 包含校園地圖/寧靜湖/鳳凰大道) -->
+  <!-- SEO Meta -->
   <title>中正大學校園地圖｜寧靜湖・鳳凰大道秘境｜圖書館攻略・影印1元｜CCU新生懶人包</title>
   <meta name="description" content="最完整中正大學校園地圖導覽：寧靜湖環湖步道、鳳凰大道四季美景、圖書館借書規則＋咖啡藝廊、宿舍旁影印單面1元、平板學習推薦。新生入學必看，校園散步路線完整收錄。">
   <meta name="keywords" content="中正大學校園地圖,寧靜湖,鳳凰大道,中正大學地圖,中正大學新生,中正大學圖書館攻略,中正影印1元,嘉義中正">
@@ -21,13 +21,80 @@
   <link rel="apple-touch-icon" href="/images/ccu-school-emblem.png">
   <!-- Bootstrap 5 CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" crossorigin="anonymous">
-  <!-- 全站 CSS (模擬路徑，如不存在不影響結構) -->
+  <!-- 全站 CSS -->
   <link rel="stylesheet" href="/css/base.css">
   <link rel="stylesheet" href="/css/layout.css">
   <link rel="stylesheet" href="/css/components.css">
-  <!-- 頁面專用 CSS 微調（確保圖片響應與卡片風格） -->
+  <!-- 優化手機端側欄與重疊問題 -->
   <style>
-    /* 補充內嵌樣式確保圖片與卡片美觀，且相容既有css */
+    /* 全域平滑滾動 + 避免錨點被固定頭部遮擋 */
+    html {
+      scroll-padding-top: 140px;
+      scroll-behavior: smooth;
+    }
+
+    /* 手機端 TOC 側欄改為橫向捲動，不與內容重疊 */
+    @media (max-width: 767.98px) {
+      .mobile-toc-scroll {
+        position: relative;
+        top: 0;
+        margin-bottom: 1.5rem;
+        background: #f8f9fa;
+        border-radius: 20px;
+        padding: 0.75rem 0;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+      }
+      .mobile-toc-scroll .toc-nav {
+        flex-direction: row !important;
+        flex-wrap: nowrap;
+        gap: 0.5rem;
+        padding: 0 0.75rem;
+      }
+      .mobile-toc-scroll .toc-nav .btn {
+        display: inline-block;
+        white-space: nowrap;
+        margin: 0 !important;
+        flex: 0 0 auto;
+      }
+      /* 手機版隱藏原本的 sticky 側欄 */
+      .desktop-toc-sidebar {
+        display: none;
+      }
+      /* 調整主內容區塊在手機的邊距 */
+      .site-main {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+      .hero-tags .tag {
+        font-size: 0.7rem;
+        padding: 4px 10px;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+      h2 {
+        font-size: 1.4rem;
+      }
+      .campus-spot-card {
+        margin-bottom: 1rem;
+      }
+    }
+
+    /* 桌機版保留原本的 sticky 側欄 */
+    @media (min-width: 768px) {
+      .mobile-toc-scroll {
+        display: none;
+      }
+      .desktop-toc-sidebar {
+        display: block;
+      }
+    }
+
+    /* 共用樣式 */
     .campus-spot-card {
       background: #fef9e8;
       border-radius: 28px;
@@ -102,13 +169,22 @@
     .sticky-md-top {
       position: sticky;
     }
+    .btn-outline-success {
+      border-width: 1.5px;
+      transition: all 0.2s;
+    }
+    .btn-outline-success:hover {
+      background-color: #2c6e2e;
+      border-color: #2c6e2e;
+      color: white;
+    }
     @media (max-width: 768px) {
       .campus-spot-card img {
         max-height: 180px;
       }
     }
   </style>
-  <!-- JSON-LD Structured Data (強化校園地圖與景點搜尋) -->
+  <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -120,15 +196,9 @@
       "isPartOf": {
         "@type": "WebSite",
         "url": "https://ccu-chiayi-guide.site"
-      },
-      "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "url": "https://ccu-chiayi-guide.site/images/ccuMap.jpg",
-        "name": "中正大學校園地圖"
       }
     }
   </script>
-  <!-- BreadcrumbList 結構化 -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -143,7 +213,7 @@
 </head>
 <body>
 <div class="site-wrapper">
-  <!-- 固定導覽列（完全與原始code相同結構） -->
+  <!-- 固定導覽列 -->
   <div class="sticky-header-wrap">
     <header class="site-header" role="banner">
       <div class="header-inner">
@@ -160,14 +230,12 @@
       </div>
     </header>
 
-    <!-- Main Navigation - 完全相同 -->
+    <!-- Main Navigation - 與首頁相同 -->
     <nav class="site-nav" id="site-nav" aria-label="主要導覽">
       <ul>
         <li><a href="/">首頁</a></li>
         <li class="has-submenu">
-          <button type="button">
-            嘉義 <span class="nav-arrow" aria-hidden="true">▾</span>
-          </button>
+          <button type="button">嘉義 <span class="nav-arrow" aria-hidden="true">▾</span></button>
           <ul class="nav-submenu" aria-label="嘉義子選單">
             <li><a href="/chiayi/index.html">嘉義總覽</a></li>
             <li><a href="/chiayi/food.html">嘉義美食</a></li>
@@ -175,9 +243,7 @@
           </ul>
         </li>
         <li class="has-submenu">
-          <button type="button">
-            民雄 <span class="nav-arrow" aria-hidden="true">▾</span>
-          </button>
+          <button type="button">民雄 <span class="nav-arrow" aria-hidden="true">▾</span></button>
           <ul class="nav-submenu" aria-label="民雄子選單">
             <li><a href="/minxiong/index.html">民雄總覽</a></li>
             <li><a href="/minxiong/food.html">民雄美食</a></li>
@@ -185,14 +251,12 @@
           </ul>
         </li>
         <li class="has-submenu">
-          <button type="button" aria-current="true">
-            中正大學 <span class="nav-arrow" aria-hidden="true">▾</span>
-          </button>
+          <button type="button" aria-current="true">中正大學 <span class="nav-arrow" aria-hidden="true">▾</span></button>
           <ul class="nav-submenu" aria-label="中正大學子選單">
             <li><a href="/ccu/index.html">中正大學總覽</a></li>
             <li><a href="/ccu/ccu-campus-life.html" aria-current="page">新生懶人包</a></li>
             <li><a href="/ccu/ccu-transport.html">交通資訊</a></li>
-            <li><a href="/ccu-housing.html">租屋事項</a></li>
+            <li><a href="/ccu/food.html">中正大學美食</a></li>
           </ul>
         </li>
       </ul>
@@ -208,17 +272,28 @@
     </ol>
   </nav>
 
+  <!-- 手機版：橫向捲動的 TOC 側欄（不與內容重疊） -->
+  <div class="mobile-toc-scroll container">
+    <nav class="d-flex flex-row align-items-stretch toc-nav" aria-label="頁內目錄（手機版）">
+      <a href="#campus-map-scenic" class="btn btn-sm btn-outline-success rounded-pill">🗺️ 校園地圖</a>
+      <a href="#library-guide" class="btn btn-sm btn-outline-success rounded-pill">📖 圖書館攻略</a>
+      <a href="#print-guide" class="btn btn-sm btn-outline-success rounded-pill">🖨️ 影印攻略</a>
+      <a href="#tech-tools" class="btn btn-sm btn-outline-success rounded-pill">💻 學習輔助</a>
+      <a href="#walk-route" class="btn btn-sm btn-outline-success rounded-pill">🚶 散步路線</a>
+    </nav>
+  </div>
+
   <!-- 主內容區塊 -->
   <main class="site-main container py-0" id="main-content">
     <div class="row align-items-start">
-      <!-- TOC 側欄 (目錄) -->
-      <aside class="col-12 col-md-2 sticky-md-top align-self-md-start" style="top: 140px;">
+      <!-- 桌機版 TOC 側欄（sticky） -->
+      <aside class="col-12 col-md-2 sticky-md-top align-self-md-start desktop-toc-sidebar" style="top: 140px;">
         <span class="d-block small text-muted mb-1 text-center">快速搜尋</span>
         <nav class="d-flex flex-column align-items-stretch toc-nav" aria-label="頁內目錄">
           <a href="#campus-map-scenic" class="btn btn-sm btn-outline-success rounded-pill m-2">🗺️ 中正校園地圖・寧靜湖・鳳凰大道</a>
           <a href="#library-guide" class="btn btn-sm btn-outline-success rounded-pill m-2">📖 圖書館攻略（借書/咖啡/藝廊）</a>
           <a href="#print-guide" class="btn btn-sm btn-outline-success rounded-pill m-2">🖨️ 影印攻略（宿舍旁1元）</a>
-          <a href="#tech-tools" class="btn btn-sm btn-outline-success rounded-pill m-2">💻 學習輔助工具推薦（平板/學校資源）</a>
+          <a href="#tech-tools" class="btn btn-sm btn-outline-success rounded-pill m-2">💻 學習輔助工具推薦</a>
           <a href="#walk-route" class="btn btn-sm btn-outline-success rounded-pill m-2">🚶 校園散步路線（含表格）</a>
         </nav>
       </aside>
@@ -234,84 +309,79 @@
           </div>
         </section>
 
-        <!-- ★ 全新重點區塊：中正大學介紹 + 放兩張圖 (校園地圖 + 寧靜湖/鳳凰大道) 並搭配詳細介紹 -->
+        <!-- 校園導覽區塊 -->
         <section class="content-section" id="campus-map-scenic" aria-labelledby="campus-map-title">
           <h2 id="campus-map-title">🏛️ 中正大學校園導覽｜官方地圖與兩大必訪美景</h2>
-          <p>國立中正大學創立於1989年，以「積極創新、修德澤人」為校訓，校園融合自然生態與人文建築。官方導覽地圖清楚標示各學院、宿舍、運動場域，而隱藏版美景<strong>寧靜湖</strong>與<strong>鳳凰大道</strong>更是學生與遊客最愛的打卡點。以下提供完整校園地圖與景點介紹，讓你按圖索驥不迷路！</p>
+          <p>國立中正大學創立於1989年，以「積極創新、修德澤人」為校訓，校園融合自然生態與人文建築。官方導覽地圖清楚標示各學院、宿舍、運動場域，而隱藏版美景<strong>寧靜湖</strong>與<strong>鳳凰大道</strong>更是學生與遊客最愛的打卡點。以下提供完整校園地圖與景點介紹，<strong>希望你第一次走進中正時，不是忙著找路，而是好好感受這片校園的美好。</strong></p>
           
-          <!-- 第一張圖：中正大學校園地圖 (ccuMap.jpg) 並加入來源連結 -->
           <div class="row mb-4">
             <div class="col-12">
               <div class="campus-spot-card text-center" style="background: #fff6e8;">
                 <h3>🗺️ 中正大學校園地圖（官方導覽）</h3>
                 <img src="/images/campus-life/ccuMap.jpg" alt="中正大學校園地圖完整版" class="img-fluid rounded" style="max-height: 380px; object-fit: contain; background: #ffffff;" onerror="this.src='https://placehold.co/800x600?text=中正大學地圖+CCU+Map'; this.onerror=null;">
-                <p class="mt-2">校區包含行政大樓、圖書館、各學院建築、宿舍生活區以及寧靜湖、後山步道等生態景觀。點擊下方連結查看最新互動地圖。</p>
+                <p class="mt-2">校區包含行政大樓、圖書館、各學院建築、宿舍生活區以及寧靜湖、後山步道等生態景觀。</p>
                 <a href="https://ccu-navigation.ccu.edu.tw/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-success rounded-pill">🔗 中正大學官方校園導覽地圖（來源） →</a>
                 <div class="img-link-source text-muted mt-1">※ 圖片對應官方導航地圖授權：<a href="https://ccu-navigation.ccu.edu.tw/" target="_blank">https://ccu-navigation.ccu.edu.tw/</a></div>
               </div>
             </div>
           </div>
           
-          <!-- 第二區塊：放寧靜湖 & 鳳凰大道 兩張圖並排，完整介紹 (對應 Lake.jpg / Phoenix Boulevard.jpg) -->
           <div class="row g-4 mt-2">
             <div class="col-md-6">
               <div class="campus-spot-card">
                 <h3>🌿 寧靜湖 · 落羽松秘境</h3>
-                <img src="/images/campus-life/Lake.jpg" alt="中正大學寧靜湖美景 – 湖畔落羽松倒影" class="img-fluid rounded" onerror="this.src='https://placehold.co/600x400?text=寧靜湖+Lake+CCU'; this.onerror=null;">
-                <p>位於行政大樓與圖書館之間的寧靜湖，環湖步道串連水岸生態，四季變換色彩，秋冬季落羽松轉紅倒映湖面，美不勝收。許多學生清晨在此慢跑、傍晚看夕陽，亦是校內寫生熱點。</p>
-                <p><strong>📌 最佳時刻：</strong>清晨薄霧與黃昏金黃時段。環湖步道全長約600公尺，輕鬆步行10分鐘。</p>
-                <p><strong>🚶 交通指引：</strong>從圖書館正門步行3分鐘即可抵達湖畔。</p>
-                <a href="https://ccu-navigation.ccu.edu.tw/p/426-1253-19.php?Lang=zh-tw" target="_blank" rel="noopener noreferrer" class="img-link-source">📷 圖片來源：中正大學校園導覽專區（寧靜湖）→</a>
+                <img src="/images/campus-life/Lake.jpg" alt="中正大學寧靜湖美景" class="img-fluid rounded" onerror="this.src='https://placehold.co/600x400?text=寧靜湖+Lake+CCU'; this.onerror=null;">
+                <p>位於行政大樓與圖書館之間的寧靜湖，環湖步道串連水岸生態，四季變換色彩，秋冬季落羽松轉紅倒映湖面，美不勝收。</p>
+                <p><strong>📌 最佳時刻：</strong>清晨薄霧與黃昏金黃時段，環湖步道輕鬆步行10分鐘。</p>
+                <a href="https://ccu-navigation.ccu.edu.tw/p/426-1253-19.php?Lang=zh-tw" target="_blank" rel="noopener noreferrer" class="img-link-source">📷 圖片來源：中正大學校園導覽專區 →</a>
               </div>
             </div>
             <div class="col-md-6">
               <div class="campus-spot-card">
                 <h3>🌺 鳳凰大道 · 花季紅毯</h3>
-                <img src="/images/campus-life/Phoenix%20Boulevard.jpg" alt="中正大學鳳凰大道–夏季鳳凰木盛開" class="img-fluid rounded" onerror="this.src='https://placehold.co/600x400?text=鳳凰大道+Phoenix+Boulevard'; this.onerror=null;">
-                <p>鳳凰大道連接大學路正門至活動中心，兩側種植超過百棵鳳凰木。每年六月畢業季，豔紅花朵齊放，鋪成天然紅毯，象徵「熱情與祝福」。平日林蔭大道是散步、騎單車的絕佳路線，夜間燈光柔和，浪漫氛圍濃厚。</p>
-                <p><strong>📌 推薦時段：</strong>5月下旬至6月鳳凰花開；傍晚涼爽時段適合慢跑。</p>
-                <p><strong>✨ 秘境小知識：</strong>鳳凰木是台南市樹，在中正大學綻放象徵學子活力。</p>
-                <a href="https://ccunature.ccu.edu.tw/p/404-1236-35575.php?Lang=zh-tw" target="_blank" rel="noopener noreferrer" class="img-link-source">📷 圖片來源：中正大學自然生態專區（鳳凰大道）→</a>
+                <img src="/images/campus-life/Phoenix%20Boulevard.jpg" alt="中正大學鳳凰大道" class="img-fluid rounded" onerror="this.src='https://placehold.co/600x400?text=鳳凰大道+Phoenix+Boulevard'; this.onerror=null;">
+                <p>鳳凰大道連接大學路正門至活動中心，兩側種植超過百棵鳳凰木。每年六月畢業季，豔紅花朵齊放，鋪成天然紅毯。</p>
+                <p><strong>📌 推薦時段：</strong>5月下旬至6月鳳凰花開，傍晚涼爽時段適合慢跑。</p>
+                <a href="https://ccunature.ccu.edu.tw/p/404-1236-35575.php?Lang=zh-tw" target="_blank" rel="noopener noreferrer" class="img-link-source">📷 圖片來源：中正大學自然生態專區 →</a>
               </div>
             </div>
           </div>
 
-          <!-- 補充校園散步起始點說明 -->
           <div class="info-box mt-4">
-            <p>💡 <strong>校園地圖實用小工具：</strong> 建議手機儲存官方導航地圖連結 <a href="https://ccu-navigation.ccu.edu.tw/" target="_blank">CCU 互動式校園地圖</a>，可即時查詢建築位置。寧靜湖與鳳凰大道之間步行約10分鐘，沿途經過紫荊大道，春季還有羊蹄甲盛開。</p>
+            <p>💡 <strong>校園地圖實用小工具：</strong> 建議手機儲存官方導航地圖連結 <a href="https://ccu-navigation.ccu.edu.tw/" target="_blank">CCU 互動式校園地圖</a>，可即時查詢建築位置。</p>
           </div>
         </section>
 
-        <!-- 區塊2：圖書館攻略 (完全保留原內容與結構) -->
+        <!-- 圖書館攻略 -->
         <section class="content-section" id="library-guide" aria-labelledby="library-title">
-          <h2 id="library-title">📖 圖書館完全攻略｜借書規則・咖啡廳・藝文展覽（附開放時間表）</h2>
-          <p>中正大學圖書館藏書逾百萬冊，是校內最重要的知識中心。以下整理新生最需要的資訊：</p>
+          <h2 id="library-title">📖 圖書館完全攻略｜借書規則・咖啡廳・藝文展覽</h2>
+          <p>中正大學圖書館藏書逾百萬冊，是校內最重要的知識中心。</p>
           
           <h3>📅 開館時間與借閱規則</h3>
           <table class="table table-bordered table-striped">
             <thead><tr><th>項目</th><th>詳細說明</th></tr></thead>
             <tbody>
-              <tr><td>開館時間（學期間）</td><td>週一至五 08:00-22:00／週六日 09:00-18:00（寒暑假另行公告）</td></tr>
+              <tr><td>開館時間（學期間）</td><td>週一至五 08:00-22:00／週六日 09:00-18:00</td></tr>
               <tr><td>大學部借閱額度</td><td>最多30冊，借期30天，可續借2次</td></tr>
-              <tr><td>預約/館際合作</td><td>可線上預約已被借出的圖書，或透過全國文獻傳遞服務申請他校資料</td></tr>
+              <tr><td>預約/館際合作</td><td>可線上預約已被借出的圖書</td></tr>
               <tr><td>逾期罰款</td><td>每日每冊5元</td></tr>
             </tbody>
           </table>
 
           <div class="card-grid mt-3">
-            <article class="library-card"><h3>☕ 圖書館咖啡廳</h3><p>位於一樓大廳左側，憑學生證享9折優惠，設有插座與無線網路，是溫書必備中繼站。</p></article>
-            <article class="library-card"><h3>🎨 藝術展覽廳</h3><p>二至三樓定期展出校內外藝術家作品，免費參觀，可追蹤圖書館粉專獲取當期展訊。</p></article>
+            <article class="library-card"><h3>☕ 圖書館咖啡廳</h3><p>位於一樓大廳左側，憑學生證享9折優惠。</p></article>
+            <article class="library-card"><h3>🎨 藝術展覽廳</h3><p>二至三樓定期展出校內外藝術家作品，免費參觀。</p></article>
           </div>
-          <div class="info-box mt-3"><p>🔔 提醒：進入圖書館請保持安靜，討論課業可至「團體討論室」（需線上預約）。</p></div>
+          <div class="info-box mt-3"><p>🔔 提醒：進入圖書館請保持安靜，討論課業可至「團體討論室」。</p></div>
         </section>
 
-        <!-- 區塊3：影印攻略 -->
+        <!-- 影印攻略 -->
         <section class="content-section" id="print-guide" aria-labelledby="print-title">
-          <h2 id="print-title">🖨️ 影印攻略｜宿舍旁影印店單面1元，省錢列印必看（價格比較表）</h2>
-          <p>無論是講義、報告或論文，影印是校園日常花費。最受學生推薦的就是<strong>宿舍旁影印店：單面黑白列印只要1元</strong>。</p>
+          <h2 id="print-title">🖨️ 影印攻略｜宿舍旁影印店單面1元</h2>
+          <p><strong>宿舍旁影印店：單面黑白列印只要1元</strong>，是校內最便宜的選擇。</p>
           
           <h3>📄 宿舍旁影印店（大學部宿舍區）</h3>
-          <ul><li><strong>位置：</strong>大學部宿舍區（靠近活動中心與郵局旁）</li><li><strong>價格：</strong>黑白單面1元／張；雙面2元；彩色單面5元起</li><li><strong>營業時間：</strong>週一至五 09:00-21:00，週六日 10:00-18:00（考試週延長）</li></ul>
+          <ul><li><strong>位置：</strong>大學部宿舍區（靠近活動中心與郵局旁）</li><li><strong>價格：</strong>黑白單面1元／張；雙面2元；彩色單面5元起</li><li><strong>營業時間：</strong>週一至五 09:00-21:00</li></ul>
 
           <h3>🏫 校內影印地點價格比較</h3>
           <table class="table table-bordered">
@@ -320,60 +390,46 @@
               <tr><td>宿舍旁影印店</td><td class="fw-bold">1元</td><td>最便宜，學生最推</td></tr>
               <tr><td>圖書館影印區</td><td>2元</td><td>可使用學生證儲值扣款</td></tr>
               <tr><td>活動中心影印部</td><td>1-1.5元</td><td>價格與宿舍區相近</td></tr>
-              <tr><td>各系所影印室</td><td>1-1.5元</td><td>需使用系上儲值卡</td></tr>
             </tbody>
           </table>
-          <div class="info-box"><p>✨ 省錢小訣竅：大量列印建議使用雙面列印，環保又省錢。若只需單張講義，使用宿舍區1元影印店最划算。</p></div>
         </section>
 
-        <!-- 區塊4：學習輔助工具推薦 未更動 -->
+        <!-- 學習輔助工具 -->
         <section class="content-section" id="tech-tools" aria-labelledby="tools-title">
-          <h2 id="tools-title">💻 學習輔助工具推薦｜平板、筆記軟體與學校免費資源</h2>
+          <h2 id="tools-title">💻 學習輔助工具推薦</h2>
           <div class="card-grid tools-grid">
-            <article class="tool-card"><h3>📱 平板選擇方向</h3><p>iPad入門款/Air（搭配Apple Pencil）適合手寫筆記；Android三星Tab S系列附S Pen；Windows二合一筆電適合需寫程式或使用專業軟體的科系。</p></article>
-            <article class="tool-card"><h3>📝 筆記與輔助軟體</h3><p>免費：OneNote、Obsidian、Notion。付費：GoodNotes 5、Notability。學校圖書館提供線上語言學習平台免費使用。</p></article>
-            <article class="tool-card"><h3>🏫 中正大學免費學習資源</h3><ul><li>計中提供全校授權軟體（Office 365、SPSS等）</li><li>磨課師(MOOCs)線上課程平台</li><li>圖書館電子書資料庫（華藝、HyRead、EBSCO）</li></ul></article>
+            <article class="tool-card"><h3>📱 平板選擇方向</h3><p>iPad入門款/Air適合手寫筆記；Android三星Tab S系列附S Pen。</p></article>
+            <article class="tool-card"><h3>📝 筆記與輔助軟體</h3><p>免費：OneNote、Obsidian、Notion。付費：GoodNotes 5。</p></article>
+            <article class="tool-card"><h3>🏫 中正大學免費學習資源</h3><ul><li>計中提供全校授權軟體</li><li>磨課師(MOOCs)線上課程平台</li><li>圖書館電子書資料庫</li></ul></article>
           </div>
-          <div class="info-box mt-3"><p>📌 小提醒：購買平板前建議先確認系上課程是否會使用特定軟體。學校電算中心亦提供筆電短期借用服務。</p></div>
         </section>
 
-        <!-- 區塊5：校園散步路線建議 表格原有，追加補充鳳凰大道/寧靜湖串聯 -->
+        <!-- 校園散步路線 -->
         <section class="content-section" id="walk-route" aria-labelledby="walk-title">
-          <h2 id="walk-title">🚶 校園散步路線建議｜從寧靜湖、鳳凰大道到後山輕旅行（約2.5公里）</h2>
+          <h2 id="walk-title">🚶 校園散步路線建議（約2.5公里）</h2>
           <table class="table table-bordered">
             <thead><tr><th>順序</th><th>地點</th><th>說明</th><th>建議停留時間</th></tr></thead>
             <tbody>
-              <tr><td>1</td><td>鳳凰大道（正門入口）</td><td>欣賞鳳凰木綠蔭大道，畢業季紅花毯</td><td>8分鐘</td></tr>
+              <tr><td>1</td><td>鳳凰大道（正門入口）</td><td>欣賞鳳凰木綠蔭大道</td><td>8分鐘</td></tr>
               <tr><td>2</td><td>圖書館前廣場</td><td>欣賞「鳳凰來儀」公共藝術</td><td>5分鐘</td></tr>
               <tr><td>3</td><td>法學院紅磚道</td><td>兩側綠蔭，寧靜學術氛圍</td><td>5分鐘</td></tr>
-              <tr><td>4</td><td>寧靜湖環湖步道</td><td>觀賞水鳥與落羽松，絕美倒影</td><td>15分鐘</td></tr>
-              <tr><td>5</td><td>社團活動中心與學餐區</td><td>可中途補給、享用學生美食</td><td>10分鐘</td></tr>
-              <tr><td>6</td><td>後山步道登山口</td><td>近體育館，緩坡上行生態豐富</td><td>20分鐘</td></tr>
-              <tr><td>7</td><td>後山頂「望嘉景觀台」</td><td>制高點眺望嘉南平原</td><td>10分鐘</td></tr>
+              <tr><td>4</td><td>寧靜湖環湖步道</td><td>觀賞水鳥與落羽松</td><td>15分鐘</td></tr>
+              <tr><td>5</td><td>後山步道登山口</td><td>近體育館，生態豐富</td><td>20分鐘</td></tr>
+              <tr><td>6</td><td>後山頂「望嘉景觀台」</td><td>制高點眺望嘉南平原</td><td>10分鐘</td></tr>
             </tbody>
           </table>
-          <p>另外推薦從<strong>鳳凰大道</strong>出發，穿越紫荊大道至<strong>寧靜湖</strong>，感受校園四季變幻之美。沿路設有休憩椅，適合午後散步或早晨運動。</p>
         </section>
 
-        <!-- 內部連結 (維持原樣) -->
-        <div class="internal-links mt-5 p-3 bg-light rounded">
-          <p><strong>📌 更多實用資訊：</strong></p>
-          <ul><li><a href="/ccu/ccu-transport.html">中正大學交通與租屋指南（公車/火車/電動車/租屋）</a></li><li><a href="/food.html">中正大學附近美食與民雄餐廳推薦</a></li><li><a href="/traffic.html">如何前往中正大學｜交通懶人包</a></li></ul>
-        </div>
       </article>
     </div>
   </main>
 
-  <!-- 回到頂部按鈕 -->
   <button class="back-to-top" aria-label="回到頂端">↑</button>
 
   <!-- Footer -->
   <footer class="site-footer" aria-label="頁尾">
     <div class="footer-inner">
-      <p class="footer-desc">
-        CCU Chiayi Guide 是一個以 SEO/SEM 課程為核心的靜態網站，
-        整理中正大學新生與嘉義旅客需要的實用在地資訊。
-      </p>
+      <p class="footer-desc">CCU Chiayi Guide 是一個以 SEO/SEM 課程為核心的靜態網站，整理中正大學新生與嘉義旅客需要的實用在地資訊。</p>
       <nav class="footer-nav" aria-label="頁尾導覽">
         <ul>
           <li><a href="/">首頁</a></li>
@@ -382,15 +438,11 @@
           <li><a href="/ccu/index.html">中正大學總覽</a></li>
         </ul>
       </nav>
-      <p class="footer-copyright">
-        © 2026 CCU Chiayi Guide.
-        本站內容以真實在地資訊為準，不捏造店家資料。
-      </p>
+      <p class="footer-copyright">© 2026 CCU Chiayi Guide. 本站內容以真實在地資訊為準，不捏造店家資料。</p>
     </div>
   </footer>
 </div>
 
-<!-- 全站共用 JS (檔案保留路徑) -->
 <script src="/js/main.js" defer></script>
 <script src="/js/pages/campus-life.js" defer></script>
 </body>
