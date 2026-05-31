@@ -20,10 +20,20 @@
 }
 
 /* ── Override components.css .card padding so Bootstrap card-img-top spans full width ── */
+/* position: relative is required for Bootstrap stretched-link to work */
 .attraction-lobby-grid .card {
   padding: 0;
   border-color: var(--color-border);
   transition: box-shadow 0.2s, transform 0.2s;
+  position: relative;
+}
+
+/* z-index: 2 keeps image above stretched-link::after (z-index:1) so lightbox click works */
+.attraction-lobby-grid .card-img-top {
+  height: 260px;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
 }
 
 .attraction-lobby-grid .card-body {
